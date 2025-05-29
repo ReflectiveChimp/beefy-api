@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const METIS = {
   name: 'METIS',
@@ -15,7 +16,7 @@ const METIS = {
   documentation: 'https://docs.metis.io/meta/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: METIS,
   FEES: METIS,
   METIS,
@@ -53,8 +54,7 @@ export const tokens = {
     address: '0x90fE084F877C65e1b577c7b2eA64B8D8dd1AB278',
     chainId: 1088,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x90fE084F877C65e1b577c7b2eA64B8D8dd1AB278.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x90fE084F877C65e1b577c7b2eA64B8D8dd1AB278.svg',
     website: 'https://netswap.io/#/swap',
     description:
       'Netswap is a decentralized exchange (DEX) which runs on Metis Andromeda (Layer2), uses the same automated market-making (AMM) model as Uniswap, features a native governance token called NETT that is fully community distributed and is capable of trading all tokens issued on Ethereum and Metis Andromeda. In a crowded marketplace with multiple contenders, Netswap offers four critically important benefits: fast and cheap trades, built-in leverage swap function, community-driven development, and a fair and open token distribution.',
@@ -67,8 +67,7 @@ export const tokens = {
     address: '0xbB06DCA3AE6887fAbF931640f67cab3e3a16F4dC',
     chainId: 1088,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xbB06DCA3AE6887fAbF931640f67cab3e3a16F4dC.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xbB06DCA3AE6887fAbF931640f67cab3e3a16F4dC.svg',
     website: 'https://tether.to/',
     description:
       'Tether is a stablecoin pegged to the US Dollar. A stablecoin is a type of cryptocurrency whose value is pegged to another fiat currency like the US Dollar or to a commodity like Gold. Tether is the first stablecoin to be created and it is the most popular stablecoin used in the ecosystem.',
@@ -81,8 +80,7 @@ export const tokens = {
     address: '0xEA32A96608495e54156Ae48931A7c20f0dcc1a21',
     chainId: 1088,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xEA32A96608495e54156Ae48931A7c20f0dcc1a21.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xEA32A96608495e54156Ae48931A7c20f0dcc1a21.svg',
     website: 'https://www.circle.com/usdc',
     documentation: 'https://developers.circle.com/docs',
     description:
@@ -97,8 +95,7 @@ export const tokens = {
     address: '0x4c078361FC9BbB78DF910800A991C7c3DD2F6ce0',
     chainId: 1088,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4651B38e7ec14BB3db731369BFE5B08F2466Bd0A.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4651B38e7ec14BB3db731369BFE5B08F2466Bd0A.svg',
     website: 'https://makerdao.com/en/',
     description:
       'Dai is a stablecoin cryptocurrency which aims to keep its value as close to one United States dollar as possible through an automated system of smart contracts on the Ethereum blockchain',
@@ -110,8 +107,7 @@ export const tokens = {
     address: '0x420000000000000000000000000000000000000A',
     chainId: 1088,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x420000000000000000000000000000000000000A.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x420000000000000000000000000000000000000A.svg',
     website: 'https://ethereum.org/',
     description:
       'The native currency that flows within the Ethereum economy is called Ether (ETH). Ether is typically used to pay for transaction fees called Gas, and it is the base currency of the network.',
@@ -125,8 +121,7 @@ export const tokens = {
     address: '0x2692BE44A6E38B698731fDDf417d060f0d20A0cB',
     chainId: 1088,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x2692BE44A6E38B698731fDDf417d060f0d20A0cB.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x2692BE44A6E38B698731fDDf417d060f0d20A0cB.svg',
     website: 'https://www.binance.com/',
     description:
       'Binance Coin (BNB) is an exchange-based token created and issued by the cryptocurrency exchange Binance. Initially created on the Ethereum blockchain as an ERC-20 token in July 2017, BNB was migrated over to Binance Chain in February 2019 and became the native coin of the Binance Chain.',
@@ -138,8 +133,7 @@ export const tokens = {
     address: '0x69fdb77064ec5c84FA2F21072973eB28441F43F3',
     chainId: 1088,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x69fdb77064ec5c84FA2F21072973eB28441F43F3.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x69fdb77064ec5c84FA2F21072973eB28441F43F3.svg',
     website:
       'https://tethys.finance/swap?inputCurrency=METIS&outputCurrency=0x69fdb77064ec5c84FA2F21072973eB28441F43F3',
     description:
@@ -152,8 +146,7 @@ export const tokens = {
     address: '0x721532bC0dA5ffaeB0a6A45fB24271E8098629A7',
     chainId: 1088,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x721532bC0dA5ffaeB0a6A45fB24271E8098629A7.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x721532bC0dA5ffaeB0a6A45fB24271E8098629A7.svg',
     website: 'https://binarydao.finance/',
     description:
       'BinaryDAO is a yield DAO that uses its treasury to bootstrap and invest in early-staged crypto projects, enabling premium DeFi yield to BYTE token holders',
@@ -165,8 +158,7 @@ export const tokens = {
     address: '0xa9109271abcf0C4106Ab7366B4eDB34405947eED',
     chainId: 1088,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xa9109271abcf0C4106Ab7366B4eDB34405947eED.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xa9109271abcf0C4106Ab7366B4eDB34405947eED.svg',
     website: 'https://fantom.foundation/',
     description:
       'Fantom is a fast, high-throughput open-source smart contract platform for digital assets and dApps.',
@@ -178,8 +170,7 @@ export const tokens = {
     address: '0xE253E0CeA0CDD43d9628567d097052B33F98D611',
     chainId: 1088,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xE253E0CeA0CDD43d9628567d097052B33F98D611.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xE253E0CeA0CDD43d9628567d097052B33F98D611.svg',
     website: 'https://www.avalabs.org/',
     description:
       'Avalanche is the fastest smart contracts platform in the blockchain industry, as measured by time-to-finality, and has the most validators securing its activity of any proof-of-stake protocol.',
@@ -191,8 +182,7 @@ export const tokens = {
     address: '0x4651B38e7ec14BB3db731369BFE5B08F2466Bd0A',
     chainId: 1088,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4651B38e7ec14BB3db731369BFE5B08F2466Bd0A.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4651B38e7ec14BB3db731369BFE5B08F2466Bd0A.svg',
     website: 'https://makerdao.com/en/',
     description:
       'Dai is a stablecoin cryptocurrency which aims to keep its value as close to one United States dollar as possible through an automated system of smart contracts on the Ethereum blockchain',
@@ -204,13 +194,11 @@ export const tokens = {
     address: '0x4aAC94985cD83be30164DfE7e9AF7C054D7d2121',
     chainId: 1088,
     decimals: 18,
-    logoURI:
-      'https://pancakeswap.finance/images/tokens/0x4aAC94985cD83be30164DfE7e9AF7C054D7d2121.svg',
+    logoURI: 'https://pancakeswap.finance/images/tokens/0x4aAC94985cD83be30164DfE7e9AF7C054D7d2121.svg',
     website: 'https://www.hummus.exchange/',
     description: 'Next Gen Decentralized AMM for Stableswaps',
     bridge: 'native',
-    documentation:
-      'https://hummus-exchange.gitbook.io/hummus-exchange/tokenomics/token-hum-and-vehum',
+    documentation: 'https://hummus-exchange.gitbook.io/hummus-exchange/tokenomics/token-hum-and-vehum',
   },
   MAIA: {
     name: 'Maia',
@@ -257,11 +245,10 @@ export const tokens = {
     address: '0x2b60473a7C41Deb80EDdaafD5560e963440eb632',
     chainId: 1088,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://tether.to/',
     description:
       'Tether is a stablecoin pegged to the US Dollar. A stablecoin is a type of cryptocurrency whose value is pegged to another fiat currency like the US Dollar or to a commodity like Gold. Tether is the first stablecoin to be created and it is the most popular stablecoin used in the ecosystem.',
     documentation: 'https://stargateprotocol.gitbook.io/stargate/v/user-docs/',
   },
-} as const satisfies Record<string, Token>;
+});

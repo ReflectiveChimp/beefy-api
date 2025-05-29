@@ -1,6 +1,6 @@
-import { addressBook, ChainId as ChainIdEnum, type Token } from '../src/address-book';
-import { getRPCClient } from '../../../src/api/rpc/client';
-import { Address, decodeAbiParameters, getAddress, getFunctionSelector } from 'viem';
+import { type Address, decodeAbiParameters, getAddress, getFunctionSelector } from 'viem';
+import { getRPCClient } from '../../../apps/api/src/api/rpc/client';
+import { ChainId as ChainIdEnum, type Token, addressBook } from '../src/address-book';
 
 type ChainId = keyof typeof addressBook;
 const allChains = Object.keys(addressBook) as ChainId[];
@@ -28,18 +28,18 @@ function shouldSkip(chainId: ChainId, token: Token) {
 async function checkChain(chainId: ChainId) {
   const { tokens } = addressBook[chainId];
   const allAddresses = Object.values(tokens)
-    .filter(t => !shouldSkip(chainId, t))
-    .map(t => getAddress(t.address));
+    .filter((t) => !shouldSkip(chainId, t))
+    .map((t) => getAddress(t.address));
   const publicClient = getRPCClient(ChainIdEnum[chainId]);
   const decimalsByAddress: Record<Address, number | undefined> = Object.fromEntries(
     (
       await Promise.allSettled(
-        allAddresses.map(address =>
+        allAddresses.map((address) =>
           publicClient.call({
             to: address,
             data: selector,
-          })
-        )
+          }),
+        ),
       )
     ).map((result, i) => {
       const address = allAddresses[i];
@@ -52,7 +52,7 @@ async function checkChain(chainId: ChainId) {
         return [address, undefined];
       }
       return [address, decodeAbiParameters([{ type: 'uint8' }], result.value.data)[0]];
-    })
+    }),
   );
 
   let mismatches = 0;
@@ -65,9 +65,7 @@ async function checkChain(chainId: ChainId) {
       console.warn(`Could not check ${token.decimals} decimals is correct for ${id} on ${chainId}`);
     } else if (token.decimals !== decimals) {
       ++mismatches;
-      console.error(
-        `Mismatching decimals for ${id} on ${chainId}: ${token.decimals} !== ${decimals}`
-      );
+      console.error(`Mismatching decimals for ${id} on ${chainId}: ${token.decimals} !== ${decimals}`);
     }
   }
 
@@ -78,7 +76,7 @@ async function checkChains(chains: ChainId[]) {
   const mismatchesPerChain = await Promise.allSettled(chains.map(checkChain));
   if (
     !mismatchesPerChain.every(
-      (result): result is PromiseFulfilledResult<number> => result.status === 'fulfilled'
+      (result): result is PromiseFulfilledResult<number> => result.status === 'fulfilled',
     )
   ) {
     throw new Error('Some chains threw errors');
@@ -96,7 +94,7 @@ async function checkAllChains() {
 function handleReturnCode<T>(promise: Promise<T>) {
   promise
     .then(() => process.exit(0))
-    .catch(err => {
+    .catch((err) => {
       console.error(err);
       process.exit(-1);
     });
@@ -104,10 +102,10 @@ function handleReturnCode<T>(promise: Promise<T>) {
 
 if (process.argv.length > 2) {
   const chains = process.argv.slice(2);
-  const includeChains = chains.map(c => (c.startsWith('+') ? c.slice(1) : c)).filter(isChainId);
-  const excludeChains = chains.map(c => (c.startsWith('-') ? c.slice(1) : '')).filter(isChainId);
+  const includeChains = chains.map((c) => (c.startsWith('+') ? c.slice(1) : c)).filter(isChainId);
+  const excludeChains = chains.map((c) => (c.startsWith('-') ? c.slice(1) : '')).filter(isChainId);
   const chainsToCheck = (includeChains.length > 0 ? includeChains : allChains).filter(
-    c => !excludeChains.includes(c)
+    (c) => !excludeChains.includes(c),
   );
   if (chainsToCheck.length === 0) {
     console.error('No chains to check');

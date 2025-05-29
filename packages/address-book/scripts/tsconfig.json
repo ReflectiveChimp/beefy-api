@@ -4,7 +4,5 @@
     "experimentalResolver": true,
     "transpileOnly": true
   },
-  "include": [
-    "."
-  ]
+  "include": ["."]
 }

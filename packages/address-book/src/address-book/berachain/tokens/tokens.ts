@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const BERA = {
   name: 'Wrapped Bera',
@@ -14,7 +15,7 @@ const BERA = {
   documentation: 'https://docs.berachain.com/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: BERA,
   FEES: BERA,
   BERA,
@@ -41,8 +42,7 @@ export const tokens = {
     decimals: 18,
     logoURI: '',
     website: 'https://honey.berachain.com/',
-    description:
-      'Turn your favorite stables into Honey. Leverage liquidity incentives on various platforms.',
+    description: 'Turn your favorite stables into Honey. Leverage liquidity incentives on various platforms.',
     documentation: 'https://docs.berachain.com/',
     bridge: 'native',
   },
@@ -290,4 +290,4 @@ export const tokens = {
       'Dolomite is a next-generation decentralized money market protocol and DEX that offers broad token support and capital efficiency with its virtual liquidity system. The DOLO token can be used for various purposes, including over-collateralized loans, margin trading, spot trading, and other financial instruments.',
     bridge: 'native',
   },
-} as const satisfies Record<string, Token>;
+});

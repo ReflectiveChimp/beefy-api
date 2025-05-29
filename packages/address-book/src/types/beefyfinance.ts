@@ -1,4 +1,4 @@
-export interface BeefyFinance {
+export interface BeefyFinance extends Record<string, string | undefined> {
   devMultisig: string;
   treasuryMultisig: string;
   strategyOwner: string;
@@ -13,9 +13,16 @@ export interface BeefyFinance {
   beefyFeeRecipient: string;
   multicall: string;
   bifiMaxiStrategy?: string;
+  gasPrice?: string;
+  beefyFeeConverterETHtoWMATIC?: string;
+  vaultRegistry?: string;
+  gaugeStaker?: string;
+  validator?: string;
   voter: string;
   beefyFeeConfig?: string;
   vaultFactory?: string;
+  wrapperFactory?: string;
+  strategyFactory?: string;
   legacyStrategyFactory?: string;
   zap?: string;
   zapTokenManager?: string;
@@ -44,4 +51,6 @@ export interface BeefyFinance {
   beefyOracleUniswapV2?: string;
   beefyOracleSolidly?: string;
   beefyOracleAlgebra?: string;
+  beefyOraclePyth?: string;
+  beefyOracleKim?: string;
 }

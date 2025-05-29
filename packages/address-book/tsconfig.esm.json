@@ -12,10 +12,10 @@
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": false,
     "isolatedModules": true,
-    "outDir": "./build-esm/",
+    "outDir": "./build/esm/",
     "pretty": true,
     "declaration": true,
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": true
   },
-  "include": ["./src/address-book/index.ts"]
+  "include": ["./src/address-book/index.ts", "./src/util/index.ts"]
 }

@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const CANTO = {
   name: 'Wrapped Canto',
@@ -15,7 +16,7 @@ const CANTO = {
   documentation: 'https://docs.canto.io/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: CANTO,
   FEES: CANTO,
   CANTO,
@@ -336,4 +337,4 @@ export const tokens = {
       'oCVM is an options token that helps to reduce sell pressure on the native CVM token. It is earned by liquidity providers (LPs) who provide liquidity to the CVM pools. oCVM can be redeemed for CVM at a discount, or it can be locked up for a period of time as veCVM. veCVM is a governance token that allows holders to vote on the distribution of emissions, as well as receive weekly bribes and fees.',
     documentation: 'https://docs.velocimeter.xyz/oFVMmech',
   },
-} as const satisfies Record<string, Token>;
+});

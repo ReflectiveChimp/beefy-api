@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const ETH = {
   name: 'Wrapped Ether ',
@@ -13,7 +14,7 @@ const ETH = {
   documentation: 'https://ethereum.org/en/developers/docs/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: ETH,
   FEES: ETH,
   ETH,
@@ -75,4 +76,4 @@ export const tokens = {
       'MANTA is the network gas token of Manta Atlantic and also benefits from the sequencer revenue of Manta Pacific. Holders can also vote in governance proposals of both chains.',
     bridge: 'manta-canonical',
   },
-} as const satisfies Record<string, Token>;
+});

@@ -1,8 +1,11 @@
-# Global
+# OS
 .DS_Store
+
+# Output
 node_modules
 dist
 .cache
+.turbo
 
 # local env files
 .env

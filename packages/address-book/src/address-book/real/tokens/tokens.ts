@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const ETH = {
   name: 'Wrapped Re.Al Ether',
@@ -14,7 +15,7 @@ const ETH = {
   documentation: 'https://ethereum.org/en/developers/docs/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: ETH,
   FEES: ETH,
   ETH,
@@ -42,8 +43,7 @@ export const tokens = {
     logoURI: '',
     website: 'https://makerdao.com/en/',
     bridge: 'real-canonical',
-    documentation:
-      'https://docs.makerdao.com/smart-contract-modules/dai-module/dai-detailed-documentation',
+    documentation: 'https://docs.makerdao.com/smart-contract-modules/dai-module/dai-detailed-documentation',
     description:
       'Dai is a stablecoin cryptocurrency which aims to keep its value as close to one United States dollar as possible through an automated system of smart contracts on the Ethereum blockchain',
     risks: ['NO_TIMELOCK'],
@@ -146,4 +146,4 @@ export const tokens = {
     chainId: 111188,
     risks: ['NO_TIMELOCK'],
   },
-} as const satisfies Record<string, Token>;
+});

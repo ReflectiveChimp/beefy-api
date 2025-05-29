@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const FUSE = {
   name: 'FUSE',
@@ -15,7 +16,7 @@ const FUSE = {
   documentation: 'https://docs.fuse.io/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: FUSE,
   FEES: FUSE,
   FUSE,
@@ -43,8 +44,7 @@ export const tokens = {
     decimals: 18,
     logoURI: 'https://assets.coingecko.com/coins/images/19479/thumb/agEUR.png?1635283566',
     website: 'https://app.angle.money/',
-    description:
-      'Angle is a decentralized, capital-efficient and over-collateralized stablecoins protocol.',
+    description: 'Angle is a decentralized, capital-efficient and over-collateralized stablecoins protocol.',
     documentation: 'https://docs.angle.money/',
   },
   xVOLT: {
@@ -203,8 +203,7 @@ export const tokens = {
     address: '0x90708b20ccC1eb95a4FA7C8b18Fd2C22a0Ff9E78',
     chainId: 122,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x90708b20ccC1eb95a4FA7C8b18Fd2C22a0Ff9E78.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x90708b20ccC1eb95a4FA7C8b18Fd2C22a0Ff9E78.svg',
     website: 'https://sushi.com/',
     description:
       'Sushi is the home of DeFi. Their community is building a comprehensive, decentralized trading platform for the future of finance. Swap, earn, stack yields, lend, borrow, leverage all on one decentralized, community driven platform.',
@@ -232,4 +231,4 @@ export const tokens = {
     oracleId: 'sushi-fuse-bifi-wfuse',
     oracle: 'lps',
   },
-} as const satisfies Record<string, Token>;
+});

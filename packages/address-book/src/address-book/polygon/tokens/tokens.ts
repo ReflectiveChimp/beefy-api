@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const MATIC = {
   name: 'Wrapped POL',
@@ -30,7 +31,7 @@ const MAI = {
   documentation: 'https://docs.mai.finance/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: MATIC,
   FEES: MATIC,
   MATIC,
@@ -140,8 +141,7 @@ export const tokens = {
     address: '0x29e38769f23701A2e4A8Ef0492e19dA4604Be62c',
     chainId: 137,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://tether.to/',
     description:
       'Tether is a stablecoin pegged to the US Dollar. A stablecoin is a type of cryptocurrency whose value is pegged to another fiat currency like the US Dollar or to a commodity like Gold. Tether is the first stablecoin to be created and it is the most popular stablecoin used in the ecosystem.',
@@ -166,8 +166,7 @@ export const tokens = {
     address: '0x501acE9c35E60f03A2af4d484f49F9B1EFde9f40',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x501acE9c35E60f03A2af4d484f49F9B1EFde9f40.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x501acE9c35E60f03A2af4d484f49F9B1EFde9f40.svg',
     website: 'https://solace.fi/',
     description:
       'Solace is building a community around making this space safe, secure and trusted so that we can onboard and de-risk DeFi and other crypto applications while opening the space to millions of users. We recently launched a coverage policy protocol that enables protection for liquidity providers, Defi protocols or DAOs to mitigate loss from hacks, bugs and exploits. Our purpose is to transform DeFi by delivering intelligent and empowering tools for a safe, secure and trusted industry.',
@@ -206,8 +205,7 @@ export const tokens = {
     website: 'https://lucidao.com/',
     description:
       'Lucidao aims to gather a community of oracles and users to build the infrastructure and facilitate the bridge between crypto and the real worlds.',
-    logoURI:
-      'https://assets.coingecko.com/coins/images/23693/large/lcd-icon-color-200px.png?1645450706',
+    logoURI: 'https://assets.coingecko.com/coins/images/23693/large/lcd-icon-color-200px.png?1645450706',
   },
   LDO: {
     name: 'Lido DAO',
@@ -229,8 +227,7 @@ export const tokens = {
     address: '0xD30DC92b8ec0fa8de625768d208f51A93C10aFF2',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xD30DC92b8ec0fa8de625768d208f51A93C10aFF2.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xD30DC92b8ec0fa8de625768d208f51A93C10aFF2.svg',
     website: '',
     description: '',
   },
@@ -243,8 +240,7 @@ export const tokens = {
     decimals: 18,
     logoURI: '',
     website: 'https://curve.finance/crvusd',
-    description:
-      'crvUSD is a collateralized-debt-position (CDP) stablecoin pegged to the US Dollar',
+    description: 'crvUSD is a collateralized-debt-position (CDP) stablecoin pegged to the US Dollar',
     documentation: 'https://docs.curve.finance/crvUSD/crvUSD/',
     bridge: 'polygon-canonical',
   },
@@ -393,8 +389,7 @@ export const tokens = {
     address: '0x72bd80445b0db58ebe3E8dB056529D4C5FAF6F2f',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xC42C30aC6Cc15faC9bD938618BcaA1a1FaE8501d.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xC42C30aC6Cc15faC9bD938618BcaA1a1FaE8501d.svg',
     website: 'https://near.org/',
     description:
       'Through simple, secure, and scalable technology, NEAR empowers millions to invent and explore new experiences. Business, creativity, and community are being reimagined for a more sustainable and inclusive future.',
@@ -447,8 +442,7 @@ export const tokens = {
     website: 'https://tether.to/en/',
     description: 'Euro Tether token (EURt) is the first euro-pegged stablecoin pegged to the Euro.',
     bridge: 'polygon-canonical',
-    logoURI:
-      'https://assets.coingecko.com/coins/images/17385/small/Tether_full_logo_dm.png?1627537298',
+    logoURI: 'https://assets.coingecko.com/coins/images/17385/small/Tether_full_logo_dm.png?1627537298',
   },
   renBTC: {
     name: 'renBTC',
@@ -460,8 +454,7 @@ export const tokens = {
     website: 'https://renproject.io/',
     description:
       'RenBTC is an ERC-20 token built on the Ethereum network, pegged to Bitcoin. This means that each RenBTC can be always redeemed for one Bitcoin, and hence tends to maintain its value at close to the Bitcoin market rate.',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xfCe146bF3146100cfe5dB4129cf6C82b0eF4Ad8c.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xfCe146bF3146100cfe5dB4129cf6C82b0eF4Ad8c.png',
   },
   IXT: {
     name: 'IX Token IXT',
@@ -470,8 +463,7 @@ export const tokens = {
     address: '0xE06Bd4F5aAc8D0aA337D13eC88dB6defC6eAEefE',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://assets.coingecko.com/coins/images/20927/large/IXT_SYMBOL_SVG_RGB_BLACK.png?1637934555',
+    logoURI: 'https://assets.coingecko.com/coins/images/20927/large/IXT_SYMBOL_SVG_RGB_BLACK.png?1637934555',
     website: 'https://www.planetix.com/',
     description:
       'Planet IX is an online NFT-strategy game where a broken digital rendition of Planet Earth is its game field.',
@@ -498,8 +490,7 @@ export const tokens = {
     chainId: 137,
     decimals: 6,
     website: 'https://www.straitsx.com/sg',
-    description:
-      'XSGD is the digital Singapore Dollar running on the Ethereum and Zilliqa blockchains.',
+    description: 'XSGD is the digital Singapore Dollar running on the Ethereum and Zilliqa blockchains.',
     logoURI: '',
   },
   jSGD: {
@@ -557,8 +548,7 @@ export const tokens = {
     address: '0x51869836681BcE74a514625c856aFb697a013797',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://assets.coingecko.com/coins/images/19905/large/kKkWmniB_400x400.jpg?1636100432',
+    logoURI: 'https://assets.coingecko.com/coins/images/19905/large/kKkWmniB_400x400.jpg?1636100432',
     website: 'https://genesis.game/',
     description:
       'Genesis is a multicreator gaming universe, with a diverse community working together to achieve a common goal: A metaverse that will still be growing, evolving, and actively played in 100 years',
@@ -698,8 +688,7 @@ export const tokens = {
     address: '0xd8cA34fd379d9ca3C6Ee3b3905678320F5b45195',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x8D9bA570D6cb60C7e3e0F31343Efe75AB8E65FB1.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x8D9bA570D6cb60C7e3e0F31343Efe75AB8E65FB1.svg',
     website: 'https://www.olympusdao.finance/',
     description:
       'Olympus is building a community-owned decentralized financial infrastructure to bring more stability and transparency for the world.',
@@ -891,8 +880,7 @@ export const tokens = {
     chainId: 137,
     logoURI: 'https://assets.coingecko.com/coins/images/17173/small/pear200.png',
     website: 'https://pearzap.com/',
-    description:
-      'PearZap is a high yield farm & pool on the Polygon Chain (MATIC) and Binance Smart Chain',
+    description: 'PearZap is a high yield farm & pool on the Polygon Chain (MATIC) and Binance Smart Chain',
   },
   SPADE: {
     name: 'PolygonFarm',
@@ -913,8 +901,7 @@ export const tokens = {
     oracleId: 'DG',
     decimals: 18,
     chainId: 137,
-    logoURI:
-      'https://raw.githubusercontent.com/sameepsi/quickswap-default-token-list/master/assets/dg.jpg',
+    logoURI: 'https://raw.githubusercontent.com/sameepsi/quickswap-default-token-list/master/assets/dg.jpg',
     website: 'https://decentral.games/',
     description: 'decentral.games is a DAO-governed metaverse casino powered by $DG',
   },
@@ -966,8 +953,7 @@ export const tokens = {
     website: 'https://apeswap.finance/',
     description:
       'ApeSwap is a leading decentralized exchange (DEX) on Binance Smart Chain and Polygon focused on offering a premier trading experience. Users are incentivized to pool liquidity on ApeSwap through yield farming to earn the native currency, $BANANA. Additionally, apes can use their earned $BANANA to stake and earn other tokens and unlock exclusive features. Built by DeFi apes, for DeFi apes, we have a dedicated team with years of experience who are committed to the DeFi community and growing the ApeSwap Jungle.',
-    logoURI:
-      'https://raw.githubusercontent.com/ApeSwapFinance/apeswap-token-lists/main/assets/BANANA.svg',
+    logoURI: 'https://raw.githubusercontent.com/ApeSwapFinance/apeswap-token-lists/main/assets/BANANA.svg',
   },
   oldBIFI: {
     name: 'beefy.finance',
@@ -996,8 +982,7 @@ export const tokens = {
     bridge: 'polygon-canonical',
     logoURI:
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
-    documentation:
-      'https://docs.makerdao.com/smart-contract-modules/dai-module/dai-detailed-documentation',
+    documentation: 'https://docs.makerdao.com/smart-contract-modules/dai-module/dai-detailed-documentation',
   },
   DEGEN: {
     name: 'DEGEN Index',
@@ -1084,8 +1069,7 @@ export const tokens = {
     chainId: 137,
     website: 'https://gainsnetwork.io/',
     description: 'Decentralized leverage trading platform on Polygon and Arbitrum.',
-    logoURI:
-      'https://raw.githubusercontent.com/beefyfinance/beefy-app/prod/src/images/single-assets/GNS.png',
+    logoURI: 'https://raw.githubusercontent.com/beefyfinance/beefy-app/prod/src/images/single-assets/GNS.png',
     documentation: 'https://gains-network.gitbook.io/docs-home/',
     bridge: 'layer-zero',
   },
@@ -1199,8 +1183,7 @@ export const tokens = {
     oracleId: 'SOL',
     decimals: 18,
     chainId: 137,
-    logoURI:
-      'https://assets.coingecko.com/coins/images/4128/large/coinmarketcap-solana-200.png?1616489452',
+    logoURI: 'https://assets.coingecko.com/coins/images/4128/large/coinmarketcap-solana-200.png?1616489452',
     website: 'https://solana.com/',
     description:
       'The Solana protocol is designed to facilitate decentralized app (DApp) creation. It aims to improve scalability by introducing a proof-of-history (PoH) consensus combined with the underlying proof-of-stake (PoS) consensus of the blockchain.',
@@ -1229,8 +1212,7 @@ export const tokens = {
       'UNI is the governance token for Uniswap. UNI was introduced on 16th September 2020 through a retrospective airdrop to users who have interacted with the protocol either by swapping tokens or by providing liquidity.',
     bridge: 'polygon-canonical',
     chainId: 137,
-    logoURI:
-      'https://raw.githubusercontent.com/sameepsi/quickswap-interface/master/public/favicon1.png',
+    logoURI: 'https://raw.githubusercontent.com/sameepsi/quickswap-interface/master/public/favicon1.png',
     documentation: 'https://docs.uniswap.org/concepts/governance/overview',
   },
   pUSDCe: {
@@ -1311,8 +1293,7 @@ export const tokens = {
     website: 'https://wault.finance/',
     description:
       'WEXpoly, or Wault EXchange Token, is the foundational token of WaultSwap, on the Polygon network. ',
-    logoURI:
-      'https://assets.coingecko.com/coins/images/16282/small/ws_purple_circle_200x200_%281%29.png',
+    logoURI: 'https://assets.coingecko.com/coins/images/16282/small/ws_purple_circle_200x200_%281%29.png',
   },
   xMARK: {
     name: 'Standard',
@@ -1324,8 +1305,7 @@ export const tokens = {
     logoURI:
       'https://raw.githubusercontent.com/trustwallet/assets/8cb78aca77b340510958ed98a3cd260d2d7f0420/blockchains/ethereum/assets/0x36b679bd64Ed73DBfd88909cDCB892cB66Bd4CBb/logo.png',
     website: 'https://benchmarkprotocol.finance/',
-    description:
-      'Benchmark Protocol is an elastic stablecoin-alternative bridging capital markets to DeFi.',
+    description: 'Benchmark Protocol is an elastic stablecoin-alternative bridging capital markets to DeFi.',
   },
   YFI: {
     name: 'yearn.finance',
@@ -1479,8 +1459,7 @@ export const tokens = {
     chainId: 137,
     decimals: 18,
     website: 'https://filecoin.io/',
-    description:
-      'Filecoin is an open-source cloud storage marketplace, protocol, and cryptocurrency.',
+    description: 'Filecoin is an open-source cloud storage marketplace, protocol, and cryptocurrency.',
     logoURI:
       'https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/polygon/assets/0xEde1B77C0Ccc45BFa949636757cd2cA7eF30137F/logo.png',
   },
@@ -1507,8 +1486,7 @@ export const tokens = {
     website: 'https://www.binance.com/',
     description:
       'Binance Coin (BNB) is an exchange-based token created and issued by the cryptocurrency exchange Binance. Initially created on the Ethereum blockchain as an ERC-20 token in July 2017, BNB was migrated over to Binance Chain in February 2019 and became the native coin of the Binance Chain.',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png',
   },
   PUP: {
     name: 'Polypup.Finance',
@@ -1638,8 +1616,7 @@ export const tokens = {
     address: '0x2F800Db0fdb5223b3C3f354886d907A671414A7F',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x2F800Db0fdb5223b3C3f354886d907A671414A7F.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x2F800Db0fdb5223b3C3f354886d907A671414A7F.svg',
     website: 'https://toucan.earth/',
     description:
       'Toucan Protocol brings carbon as a new money-lego to Web3. Kickstarting an open and decentralized climate finance ecosystem.',
@@ -1651,8 +1628,7 @@ export const tokens = {
     address: '0x4e78011Ce80ee02d2c3e649Fb657E45898257815',
     chainId: 137,
     decimals: 9,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4e78011Ce80ee02d2c3e649Fb657E45898257815.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4e78011Ce80ee02d2c3e649Fb657E45898257815.svg',
     website: 'https://www.klimadao.finance/',
     description:
       'Klima DAO gives Web3 builders and users the opportunity to participate in the carbon market through the KLIMA token.',
@@ -1873,8 +1849,7 @@ export const tokens = {
     address: '0x60D55F02A771d515e077c9C2403a1ef324885CeC',
     chainId: 137,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://tether.to/',
     description:
       'Aave interest bearing USDT. Tether is a stablecoin pegged to the US Dollar. A stablecoin is a type of cryptocurrency whose value is pegged to another fiat currency like the US Dollar or to a commodity like Gold. Tether is the first stablecoin to be created and it is the most popular stablecoin used in the ecosystem.',
@@ -1888,8 +1863,7 @@ export const tokens = {
     address: '0x19C60a251e525fa88Cd6f3768416a8024e98fC19',
     chainId: 137,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://tether.to/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -1902,12 +1876,10 @@ export const tokens = {
     address: '0xFf4ce5AAAb5a627bf82f4A571AB1cE94Aa365eA6',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
-    description:
-      'Balancer linear pool that consist of 50/50 USDT and wrapped Aave Interest Bearing USDT.',
+    description: 'Balancer linear pool that consist of 50/50 USDT and wrapped Aave Interest Bearing USDT.',
   },
   amUSDC: {
     name: 'Aave USDC',
@@ -1916,8 +1888,7 @@ export const tokens = {
     address: '0x1a13F4Ca1d028320A707D99520AbFefca3998b7F',
     chainId: 137,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://www.circle.com/usdc',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -1931,8 +1902,7 @@ export const tokens = {
     address: '0x221836a597948Dce8F3568E044fF123108aCc42A',
     chainId: 137,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://www.circle.com/usdc',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -1945,12 +1915,10 @@ export const tokens = {
     address: '0xF93579002DBE8046c43FEfE86ec78b1112247BB8',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
-    description:
-      'Balancer linear pool that consist of 50/50 USDC and wrapped Aave Interest Bearing USDC.',
+    description: 'Balancer linear pool that consist of 50/50 USDC and wrapped Aave Interest Bearing USDC.',
   },
   amDAI: {
     name: 'Aave DAI',
@@ -1959,8 +1927,7 @@ export const tokens = {
     address: '0x27F8D03b3a2196956ED754baDc28D73be8830A6e',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://makerdao.com/en/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -1974,8 +1941,7 @@ export const tokens = {
     address: '0xEE029120c72b0607344f35B17cdD90025e647B00',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://makerdao.com/en/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -1988,12 +1954,10 @@ export const tokens = {
     address: '0x178E029173417b1F9C8bC16DCeC6f697bC323746',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
-    description:
-      'Balancer linear pool that consist of 50/50 DAI and wrapped Aave Interest Bearing DAI.',
+    description: 'Balancer linear pool that consist of 50/50 DAI and wrapped Aave Interest Bearing DAI.',
   },
   bbamUSD: {
     name: 'Balancer Aave Stable Composable Pool',
@@ -2002,8 +1966,7 @@ export const tokens = {
     address: '0x48e6B98ef6329f8f0A30eBB8c7C960330d648085',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
     description:
@@ -2016,8 +1979,7 @@ export const tokens = {
     address: '0xE22483774bd8611bE2Ad2F4194078DaC9159F4bA',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/',
     description: 'Balancer composable pool that consist of BRZ and jBRL',
@@ -2133,8 +2095,7 @@ export const tokens = {
     address: '0x6d80113e533a2C0fe82EaBD35f1875DcEA89Ea97',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://polygon.technology/',
     description:
       'Aave interest bearing MATIC. Polygon is a protocol and a framework for building and connecting Ethereum-compatible blockchain networks. Aggregating scalable solutions on Ethereum supporting a multi-chain Ethereum ecosystem.',
@@ -2146,8 +2107,7 @@ export const tokens = {
     address: '0x0D6135b2cFBAE3b1c58368a93b855fa54FA5aae1',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://polygon.technology/',
     description:
       'Wrapped Aave interest bearing MATIC. Polygon is a protocol and a framework for building and connecting Ethereum-compatible blockchain networks. Aggregating scalable solutions on Ethereum supporting a multi-chain Ethereum ecosystem.',
@@ -2159,8 +2119,7 @@ export const tokens = {
     address: '0xE4885Ed2818Cc9E840A25f94F9b2A28169D1AEA7',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://polygon.technology/',
     description:
       'Balancer Boosted Aave interest bearing MATIC. Polygon is a protocol and a framework for building and connecting Ethereum-compatible blockchain networks. Aggregating scalable solutions on Ethereum supporting a multi-chain Ethereum ecosystem.',
@@ -2225,8 +2184,7 @@ export const tokens = {
     address: '0x750e4C4984a9e0f12978eA6742Bc1c5D248f40ed',
     chainId: 137,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x750e4C4984a9e0f12978eA6742Bc1c5D248f40ed.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x750e4C4984a9e0f12978eA6742Bc1c5D248f40ed.svg',
     website: 'https://www.axelar.network/',
     bridge: 'axelar',
     description:
@@ -2335,13 +2293,11 @@ export const tokens = {
     address: '0x4b4327dB1600B8B1440163F667e199CEf35385f5',
     chainId: 137,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4b4327dB1600B8B1440163F667e199CEf35385f5.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4b4327dB1600B8B1440163F667e199CEf35385f5.svg',
     website: 'https://www.coinbase.com/',
     description:
       "Coinbase Wrapped Staked ETH (“cbETH”) is a utility token that represents Ethereum 2 (ETH2), which is ETH staked through Coinbase. Over time, the price of cbETH will likely deviate from ETH because cbETH represents 1 staked ETH plus all of its accrued staking interest starting from when cbETH's conversion rate and balance were initialized (June 16, 2022 19:34 UTC). cbETH is minted exclusively by Coinbase.",
-    documentation:
-      'https://help.coinbase.com/en/coinbase/trading-and-funding/staking-rewards/cbeth',
+    documentation: 'https://help.coinbase.com/en/coinbase/trading-and-funding/staking-rewards/cbeth',
     bridge: 'polygon-canonical',
   },
   ZRO: {
@@ -2358,4 +2314,4 @@ export const tokens = {
       'ZRO is the native asset of the LayerZero protocol. LayerZero is an omnichain interoperability protocol that supports censorship-resistant messages and permissionless development through immutable smart contracts called Endpoints.',
     bridge: 'layer-zero',
   },
-} as const satisfies Record<string, Token>;
+});

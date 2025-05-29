@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const CELO = {
   name: 'CELO',
@@ -32,7 +33,7 @@ const SUSHIV1 = {
   logoURI: 'https://ftmscan.com/token/images/sushiswap_32.png',
 };
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: WCELO,
   FEES: WCELO,
   CELO,
@@ -94,8 +95,7 @@ export const tokens = {
     address: '0x122013fd7dF1C6F636a5bb8f03108E876548b455',
     chainId: 42220,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x122013fd7dF1C6F636a5bb8f03108E876548b455.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x122013fd7dF1C6F636a5bb8f03108E876548b455.svg',
     website: 'https://ethereum.org/',
     description:
       'The native currency that flows within the Ethereum economy is called Ether (ETH). Ether is typically used to pay for transaction fees called Gas, and it is the base currency of the network.',
@@ -111,8 +111,7 @@ export const tokens = {
     website: 'https://makerdao.com/en/',
     description:
       'DAI is an Ethereum-based stablecoin (stable-price cryptocurrency) whose issuance and development is managed by the Maker Protocol and the MakerDAO decentralized autonomous organization.',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3.png',
   },
   DAI: {
     name: 'Dai Stablecoin',
@@ -121,8 +120,7 @@ export const tokens = {
     address: '0xE4fE50cdD716522A56204352f00AA110F731932d',
     chainId: 42220,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xE4fE50cdD716522A56204352f00AA110F731932d.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xE4fE50cdD716522A56204352f00AA110F731932d.svg',
     website: 'https://makerdao.com/en/',
     description:
       'DAI is an Ethereum-based stablecoin (stable-price cryptocurrency) whose issuance and development is managed by the Maker Protocol and the MakerDAO decentralized autonomous organization.',
@@ -146,8 +144,7 @@ export const tokens = {
     address: '0xef4229c8c3250C675F21BCefa42f58EfbfF6002a',
     chainId: 42220,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xef4229c8c3250C675F21BCefa42f58EfbfF6002a.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xef4229c8c3250C675F21BCefa42f58EfbfF6002a.svg',
     website: 'https://www.circle.com/usdc',
     documentation: 'https://developers.circle.com/docs',
     description:
@@ -160,8 +157,7 @@ export const tokens = {
     address: '0x88eeC49252c8cbc039DCdB394c0c2BA2f1637EA0',
     chainId: 42220,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x88eeC49252c8cbc039DCdB394c0c2BA2f1637EA0.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x88eeC49252c8cbc039DCdB394c0c2BA2f1637EA0.svg',
     website: 'https://tether.to/',
     description:
       'Tether is a stablecoin pegged to the US Dollar. A stablecoin is a type of cryptocurrency whose value is pegged to another fiat currency like the US Dollar or to a commodity like Gold. Tether is the first stablecoin to be created and it is the most popular stablecoin used in the ecosystem.',
@@ -173,8 +169,7 @@ export const tokens = {
     address: '0x73a210637f6F6B7005512677Ba6B3C96bb4AA44B',
     chainId: 42220,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x73a210637f6F6B7005512677Ba6B3C96bb4AA44B.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x73a210637f6F6B7005512677Ba6B3C96bb4AA44B.svg',
     website: 'https://www.mobius.money/#/swap',
     description: 'A cross-chain stableswap DEX on Celo',
   },
@@ -205,4 +200,4 @@ export const tokens = {
     oracleId: 'sushi-celo-csushi-celo',
     oracle: 'lps',
   },
-} as const satisfies Record<string, Token>;
+});

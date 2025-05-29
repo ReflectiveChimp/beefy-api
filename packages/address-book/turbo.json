@@ -1,0 +1,17 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["build:esm", "build:cjs"]
+    },
+    "build:cjs": {
+      "inputs": ["src/**", "package.json", "tsconfig.json", "tsconfig.esm.json", "tsconfig.cjs.json"],
+      "outputs": ["build/cjs/**"]
+    },
+    "build:esm": {
+      "inputs": ["src/**", "package.json", "tsconfig.json", "tsconfig.esm.json"],
+      "outputs": ["build/esm/**"]
+    }
+  }
+}

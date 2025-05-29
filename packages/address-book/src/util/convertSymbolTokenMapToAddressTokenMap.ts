@@ -5,14 +5,14 @@ export type AddressToTokenMap<TBook extends Record<string, Token>> = {
 };
 
 export function convertSymbolTokenMapToAddressTokenMap<T extends Record<string, Token>>(
-  idTokenMap: T
+  idTokenMap: T,
 ): AddressToTokenMap<T> {
   const addressToId = Object.keys(idTokenMap).reduce(
     (acc, id) => {
       acc[idTokenMap[id].address] = id;
       return acc;
     },
-    {} as Record<string, string | TokenWithId>
+    {} as Record<string, string | TokenWithId>,
   );
 
   return new Proxy(addressToId, {

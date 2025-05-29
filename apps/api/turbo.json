@@ -1,0 +1,15 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "dev:types": {
+      "cache": false,
+      "persistent": true
+    },
+    "dev": {
+      "with": ["dev:types"],
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

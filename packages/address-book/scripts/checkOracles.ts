@@ -24,17 +24,17 @@ async function fetchVaults(): Promise<Record<ChainId, Vault[]>> {
       acc[vault.chain].push(vault);
       return acc;
     },
-    {} as Record<ChainId, Vault[]>
+    {} as Record<ChainId, Vault[]>,
   );
 }
 
 async function fetchPrices(): Promise<Record<string, number>> {
   const urls = ['https://api.beefy.finance/prices', 'https://api.beefy.finance/lps'];
   const responses = await Promise.all(
-    urls.map(url => fetch(url).then(r => r.json() as Promise<Record<string, unknown>>))
+    urls.map((url) => fetch(url).then((r) => r.json() as Promise<Record<string, unknown>>)),
   );
   return responses
-    .flatMap(r => Object.entries(r))
+    .flatMap((r) => Object.entries(r))
     .reduce(
       (acc, [key, value]) => {
         if (typeof value === 'number' && isFinite(value) && !isNaN(value)) {
@@ -42,7 +42,7 @@ async function fetchPrices(): Promise<Record<string, number>> {
         }
         return acc;
       },
-      {} as Record<string, number>
+      {} as Record<string, number>,
     );
 }
 
@@ -60,14 +60,13 @@ function checkChain(chainId: ChainId, vaults: Vault[], prices: Record<string, nu
     }
 
     const vaultsWithToken = vaults.filter(
-      vault =>
-        vault.tokenAddress && vault.tokenAddress.toLowerCase() === token.address.toLowerCase()
+      (vault) => vault.tokenAddress && vault.tokenAddress.toLowerCase() === token.address.toLowerCase(),
     );
     for (const vault of vaultsWithToken) {
       if (vault.oracleId !== token.oracleId) {
         ++errors;
         console.error(
-          `Mismatched oracleId for ${id} on ${chainId}: ${vault.oracleId} from vault ${vault.id} vs ${token.oracleId} from addressbook`
+          `Mismatched oracleId for ${id} on ${chainId}: ${vault.oracleId} from vault ${vault.id} vs ${token.oracleId} from addressbook`,
         );
       }
     }
@@ -86,7 +85,7 @@ function checkChain(chainId: ChainId, vaults: Vault[], prices: Record<string, nu
 async function start() {
   const [vaults, prices] = await Promise.all([fetchVaults(), fetchPrices()]);
   const errors = allChains
-    .map(chain => checkChain(chain, vaults[chain] || [], prices))
+    .map((chain) => checkChain(chain, vaults[chain] || [], prices))
     .reduce((acc, e) => acc + e, 0);
   if (errors > 0) {
     throw new Error(`Found ${errors} errors, see above`);
@@ -95,7 +94,7 @@ async function start() {
 
 start()
   .then(() => process.exit(0))
-  .catch(err => {
+  .catch((err) => {
     console.error(err);
     process.exit(-1);
   });

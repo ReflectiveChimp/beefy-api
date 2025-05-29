@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const ETH = {
   name: 'Wrapped Ether',
@@ -14,7 +15,7 @@ const ETH = {
   documentation: 'https://ethereum.org/en/developers/docs/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: ETH,
   FEES: ETH,
   ETH,
@@ -58,8 +59,7 @@ export const tokens = {
     description:
       'The launch of TProtocol will drastically alter the current DeFi picture and add an important missing piece, making DeFi users able to benefit from the mid-term interest rate gap between the stables and rising treasury. TProtocol will provide permissionless interest bearing tokens backed by the treasury with short duration. The redemption price of this treasury token will increase over time as interest from treasury accrues into the tokens.',
     bridge: 'zksync-canonical',
-    documentation:
-      'https://tprotocol.gitbook.io/tprotocol-documentation/white-paper/tprotocol-documentation',
+    documentation: 'https://tprotocol.gitbook.io/tprotocol-documentation/white-paper/tprotocol-documentation',
   },
   VC: {
     name: 'Velocore',
@@ -184,4 +184,4 @@ export const tokens = {
       'Tether converts cash into digital currency, to anchor or tether the value to the price of national currencies like the US dollar, the Euro, and the offshore Chinese yuan.',
     bridge: 'zksync-canonical',
   },
-} as const satisfies Record<string, Token>;
+});

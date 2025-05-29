@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const ETH = {
   name: 'Wrapped Ether',
@@ -14,7 +15,7 @@ const ETH = {
   documentation: 'https://ethereum.org/en/developers/docs/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: ETH,
   FEES: ETH,
   ETH,
@@ -124,8 +125,7 @@ export const tokens = {
     description:
       'BEETS is the governance token for the Beethoven X protocol. Built on Balancer V2, Beethoven X is the first next-generation AMM protocol on Fantom.',
     bridge: 'multichain',
-    logoURI:
-      'https://assets.coingecko.com/coins/images/19158/small/beets-icon-large.png?1634545465',
+    logoURI: 'https://assets.coingecko.com/coins/images/19158/small/beets-icon-large.png?1634545465',
   },
   OP: {
     name: 'Optimism Token',
@@ -139,8 +139,7 @@ export const tokens = {
       'Optimistic Rollup is a layer 2 scaling solution that scales both transaction throughput and computation on Ethereum. The backbone of our implementation is the Optimistic Virtual Machine (OVM), which is fully compatible with the EVM.',
     bridge: 'native',
     logoURI: '',
-    documentation:
-      'https://help.optimism.io/hc/en-us/articles/5497354656283-What-is-the-Optimism-Token',
+    documentation: 'https://help.optimism.io/hc/en-us/articles/5497354656283-What-is-the-Optimism-Token',
   },
   opUSDCe: {
     name: 'USD Coin',
@@ -174,8 +173,7 @@ export const tokens = {
     address: '0x8c6f28f2F1A3C87F0f938b96d27520d9751ec8d9',
     chainId: 10,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xef4229c8c3250C675F21BCefa42f58EfbfF6002a.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xef4229c8c3250C675F21BCefa42f58EfbfF6002a.svg',
     website: 'https://www.synthetix.io/',
     description:
       'sUSD is a synthetic USD token enabled by the Synthetix protocol. It tracks the price of the US Dollar through price feeds supplied by Chainlink’s decentralized network of oracles',
@@ -250,8 +248,7 @@ export const tokens = {
       'Synthetix is the backbone for derivatives trading in DeFi, allowing anyone, anywhere to gain on-chain exposure to a vast range of assets.',
     bridge: 'optimism-canonical',
     logoURI: 'https://hecoinfo.com/token/images/snx_32.png',
-    documentation:
-      'https://docs.synthetix.io/synthetix-protocol/the-synthetix-protocol/synthetix-token-snx',
+    documentation: 'https://docs.synthetix.io/synthetix-protocol/the-synthetix-protocol/synthetix-token-snx',
   },
   PERP: {
     name: 'Perpetual Protocol',
@@ -346,8 +343,7 @@ export const tokens = {
     description:
       'Dai is a stablecoin cryptocurrency which aims to keep its value as close to one United States dollar as possible through an automated system of smart contracts on the Ethereum blockchain',
     bridge: 'optimism-canonical',
-    documentation:
-      'https://docs.makerdao.com/smart-contract-modules/dai-module/dai-detailed-documentation',
+    documentation: 'https://docs.makerdao.com/smart-contract-modules/dai-module/dai-detailed-documentation',
   },
   LUSD: {
     name: 'LUSD Stablecoin',
@@ -370,8 +366,7 @@ export const tokens = {
     address: '0xDecC0c09c3B5f6e92EF4184125D5648a66E35298',
     chainId: 10,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xef4229c8c3250C675F21BCefa42f58EfbfF6002a.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xef4229c8c3250C675F21BCefa42f58EfbfF6002a.svg',
     website: 'https://stargate.finance/',
     description:
       'USDC is a fully collateralized US dollar stablecoin. USDC is issued by regulated financial institutions, backed by fully reserved assets, redeemable on a 1:1 basis for US dollars.',
@@ -384,8 +379,7 @@ export const tokens = {
     address: '0xd22363e3762cA7339569F3d33EADe20127D5F98C',
     chainId: 10,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png',
     website: 'https://stargate.finance/',
     description:
       'The native currency that flows within the Ethereum economy is called Ether (ETH). Ether is typically used to pay for transaction fees called Gas, and it is the base currency of the network.',
@@ -401,8 +395,7 @@ export const tokens = {
     website: 'https://renproject.io/',
     description:
       'RenBTC is an ERC-20 token built on the Ethereum network, pegged to Bitcoin. This means that each RenBTC can be always redeemed for one Bitcoin, and hence tends to maintain its value at close to the Bitcoin market rate.',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xfCe146bF3146100cfe5dB4129cf6C82b0eF4Ad8c.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xfCe146bF3146100cfe5dB4129cf6C82b0eF4Ad8c.png',
   },
   FXS: {
     name: 'Frax Share',
@@ -747,8 +740,7 @@ export const tokens = {
     logoURI: '',
     website: 'https://www.reaper.farm/',
     description: 'ETH deposited into Reaper.Farm and leveraged through Aave',
-    documentation:
-      'https://docs.reaper.farm/reaper-farms/general-knowledge/types-of-strategies/ltv-looping',
+    documentation: 'https://docs.reaper.farm/reaper-farms/general-knowledge/types-of-strategies/ltv-looping',
   },
   bbrfaWETH: {
     name: 'Beets Reaper.Farm Boosted Aave WETH',
@@ -784,8 +776,7 @@ export const tokens = {
     logoURI: '',
     website: 'https://www.reaper.farm/',
     description: 'USDC deposited into Reaper.Farm and leveraged through Aave',
-    documentation:
-      'https://docs.reaper.farm/reaper-farms/general-knowledge/types-of-strategies/ltv-looping',
+    documentation: 'https://docs.reaper.farm/reaper-farms/general-knowledge/types-of-strategies/ltv-looping',
   },
   bbrfaUSDT: {
     name: 'Beets Reaper.Farm Boosted Aave USDT',
@@ -822,8 +813,7 @@ export const tokens = {
     logoURI: '',
     website: 'https://www.reaper.farm/',
     description: 'USDT deposited into Reaper.Farm and leveraged through Aave',
-    documentation:
-      'https://docs.reaper.farm/reaper-farms/general-knowledge/types-of-strategies/ltv-looping',
+    documentation: 'https://docs.reaper.farm/reaper-farms/general-knowledge/types-of-strategies/ltv-looping',
   },
   bbrfaDAI: {
     name: 'Beets Reaper.Farm Boosted Aave DAI',
@@ -847,8 +837,7 @@ export const tokens = {
     logoURI: '',
     website: 'https://www.reaper.farm/',
     description: 'DAI deposited into Reaper.Farm and leveraged through Aave',
-    documentation:
-      'https://docs.reaper.farm/reaper-farms/general-knowledge/types-of-strategies/ltv-looping',
+    documentation: 'https://docs.reaper.farm/reaper-farms/general-knowledge/types-of-strategies/ltv-looping',
   },
   bbrfaWBTC: {
     name: 'Beets Reaper.Farm Boosted Aave WBTC',
@@ -872,8 +861,7 @@ export const tokens = {
     logoURI: '',
     website: 'https://www.reaper.farm/',
     description: 'WBTC deposited into Reaper.Farm and leveraged through Aave',
-    documentation:
-      'https://docs.reaper.farm/reaper-farms/general-knowledge/types-of-strategies/ltv-looping',
+    documentation: 'https://docs.reaper.farm/reaper-farms/general-knowledge/types-of-strategies/ltv-looping',
   },
   USDT: {
     name: 'USD Tether',
@@ -886,8 +874,7 @@ export const tokens = {
     description:
       'Tether is a stablecoin pegged to the US Dollar. A stablecoin is a type of cryptocurrency whose value is pegged to another fiat currency like the US Dollar or to a commodity like Gold. Tether is the first stablecoin to be created and it is the most popular stablecoin used in the ecosystem.',
     bridge: 'optimism-canonical',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x55d398326f99059ff775485246999027b3197955.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x55d398326f99059ff775485246999027b3197955.png',
     documentation: 'https://tether.to/en/how-it-works',
   },
   wstETH: {
@@ -1176,8 +1163,7 @@ export const tokens = {
     description:
       'The launch of TProtocol will drastically alter the current DeFi picture and add an important missing piece, making DeFi users able to benefit from the mid-term interest rate gap between the stables and rising treasury. TProtocol will provide permissionless interest bearing tokens backed by the treasury with short duration. The redemption price of this treasury token will increase over time as interest from treasury accrues into the tokens.',
     bridge: 'optimism-canonical',
-    documentation:
-      'https://tprotocol.gitbook.io/tprotocol-documentation/white-paper/tprotocol-documentation',
+    documentation: 'https://tprotocol.gitbook.io/tprotocol-documentation/white-paper/tprotocol-documentation',
   },
   MTA: {
     name: 'Meta',
@@ -1384,8 +1370,7 @@ export const tokens = {
     logoURI: '',
     bridge: 'optimism-canonical',
     website: 'https://curve.finance/crvusd',
-    description:
-      'crvUSD is a collateralized-debt-position (CDP) stablecoin pegged to the US Dollar',
+    description: 'crvUSD is a collateralized-debt-position (CDP) stablecoin pegged to the US Dollar',
     documentation: 'https://docs.curve.finance/crvUSD/crvUSD/',
   },
   scrvUSD: {
@@ -1806,4 +1791,4 @@ export const tokens = {
       'BOLD is the USD-pegged stablecoin issued in Liquity V2. It is over-collateralized and backed only by WETH, wstETH, and rETH.',
     bridge: 'chainlink-ccip',
   },
-} as const satisfies Record<string, Token>;
+});

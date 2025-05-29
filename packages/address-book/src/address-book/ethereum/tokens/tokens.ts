@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const ETH = {
   name: 'Wrapped Ether',
@@ -14,7 +15,7 @@ const ETH = {
   documentation: 'https://ethereum.org/en/developers/docs/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: ETH,
   FEES: ETH,
   ETH,
@@ -579,8 +580,7 @@ export const tokens = {
     address: '0xdf0770dF86a8034b3EFEf0A1Bb3c889B8332FF56',
     chainId: 1,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xef4229c8c3250C675F21BCefa42f58EfbfF6002a.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xef4229c8c3250C675F21BCefa42f58EfbfF6002a.svg',
     website: 'https://stargate.finance/',
     description:
       'Stargate allows users and dApps to bridge native tokens with instant guaranteed finality. USDC is deposited in a LP pool to enable high liquidity for bridging.',
@@ -593,8 +593,7 @@ export const tokens = {
     address: '0x38EA452219524Bb87e18dE1C24D3bB59510BD783',
     chainId: 1,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://tether.to/',
     description:
       'Stargate allows users and dApps to bridge native tokens with instant guaranteed finality. USDT is deposited in a LP pool to enable high liquidity for bridging.',
@@ -621,8 +620,7 @@ export const tokens = {
     address: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
     chainId: 1,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://tether.to/',
     documentation: 'https://tether.to/en/how-it-works',
     description:
@@ -691,8 +689,7 @@ export const tokens = {
     address: '0x23878914EFE38d27C4D67Ab83ed1b93A74D4086a',
     chainId: 1,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://tether.to/',
     description:
       'Aave interest bearing USDT. Tether is a stablecoin pegged to the US Dollar. A stablecoin is a type of cryptocurrency whose value is pegged to another fiat currency like the US Dollar or to a commodity like Gold. Tether is the first stablecoin to be created and it is the most popular stablecoin used in the ecosystem.',
@@ -705,8 +702,7 @@ export const tokens = {
     address: '0x101816545F6bd2b1076434B54383a1E633390A2E',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png',
     website: 'https://stargate.finance/',
     description:
       'Stargate allows users and dApps to bridge native tokens with instant guaranteed finality. ETH is deposited in a LP pool to enable high liquidity for bridging.',
@@ -719,8 +715,7 @@ export const tokens = {
     address: '0x65799b9fD4206CdaA4A1DB79254FCbc2Fd2fFEe6',
     chainId: 1,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://tether.to/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -733,12 +728,10 @@ export const tokens = {
     address: '0xcfAE6E251369467F465f13836Ac8135bd42f8A56',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
-    description:
-      'Balancer linear pool that consist of 50/50 USDT and wrapped Aave Interest Bearing USDT.',
+    description: 'Balancer linear pool that consist of 50/50 USDT and wrapped Aave Interest Bearing USDT.',
   },
   aUSDC: {
     name: 'Aave USDC',
@@ -747,8 +740,7 @@ export const tokens = {
     address: '0x98C23E9d8f34FEFb1B7BD6a91B7FF122F4e16F5c',
     chainId: 1,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://www.circle.com/usdc',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -761,8 +753,7 @@ export const tokens = {
     address: '0x02c2d189b45CE213a40097b62D311cf0dD16eC92',
     chainId: 1,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://www.circle.com/usdc',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -775,12 +766,10 @@ export const tokens = {
     address: '0xc50d4347209F285247BDa8A09Fc1C12CE42031c3',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
-    description:
-      'Balancer linear pool that consist of 50/50 USDC and wrapped Aave Interest Bearing USDC.',
+    description: 'Balancer linear pool that consist of 50/50 USDC and wrapped Aave Interest Bearing USDC.',
   },
   DAI: {
     name: 'DAI Stablecoin',
@@ -791,8 +780,7 @@ export const tokens = {
     decimals: 18,
     logoURI: '',
     website: 'https://makerdao.com/en/',
-    documentation:
-      'https://docs.makerdao.com/smart-contract-modules/dai-module/dai-detailed-documentation',
+    documentation: 'https://docs.makerdao.com/smart-contract-modules/dai-module/dai-detailed-documentation',
     description:
       'Dai is a stablecoin cryptocurrency which aims to keep its value as close to one United States dollar as possible through an automated system of smart contracts on the Ethereum blockchain',
     bridge: 'native',
@@ -804,8 +792,7 @@ export const tokens = {
     address: '0x018008bfb33d285247A21d44E50697654f754e63',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://makerdao.com/en/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -818,8 +805,7 @@ export const tokens = {
     address: '0xEb708639E8e518B86a916db3685f90216b1C1c67',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://makerdao.com/en/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -832,12 +818,10 @@ export const tokens = {
     address: '0xfa24A90A3F2bBE5FEEA92B95cD0d14Ce709649f9',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
-    description:
-      'Balancer linear pool that consist of 50/50 DAI and wrapped Aave Interest Bearing DAI.',
+    description: 'Balancer linear pool that consist of 50/50 DAI and wrapped Aave Interest Bearing DAI.',
   },
   aETH: {
     name: 'Aave ETH',
@@ -846,8 +830,7 @@ export const tokens = {
     address: '0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://weth.io/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -875,8 +858,7 @@ export const tokens = {
     address: '0xbB6881874825E60e1160416D6C426eae65f2459E',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
     description: 'Balancer linear pool that consist of ETH and wrapped Aave Interest Bearing ETH.',
@@ -889,8 +871,7 @@ export const tokens = {
     address: '0xc443C15033FCB6Cf72cC24f1BDA0Db070DdD9786',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
     bridge: 'native',
@@ -972,8 +953,7 @@ export const tokens = {
     address: '0x6B3595068778DD592e39A122f4f5a5cF09C90fE2',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x6B3595068778DD592e39A122f4f5a5cF09C90fE2.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x6B3595068778DD592e39A122f4f5a5cF09C90fE2.svg',
     website: 'https://sushi.com/',
     description:
       'Sushi is the home of DeFi. Their community is building a comprehensive, decentralized trading platform for the future of finance. Swap, earn, stack yields, lend, borrow, leverage all on one decentralized, community driven platform.',
@@ -987,8 +967,7 @@ export const tokens = {
     address: '0x767FE9EDC9E0dF98E07454847909b5E959D7ca0E',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x767FE9EDC9E0dF98E07454847909b5E959D7ca0E.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x767FE9EDC9E0dF98E07454847909b5E959D7ca0E.svg',
     website: 'https://illuvium.io/',
     description:
       'A fully decentralized protocol, Illuvium represents a new age in gaming. It has been engineered from the ground-up to support the long-term sustainability of the Illuvium game and governance and provide players with a AAA-rated blockchain gaming experience. What makes Illuvium unique is that stakers receive regular distributions and can vote on everything from tokenomics related issues to the features in the game itself. With Illuvium, the power to define the project into the future is purposefully left to those who stake in the protocol.',
@@ -1001,8 +980,7 @@ export const tokens = {
     address: '0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32.svg',
     website: 'https://stake.lido.fi/',
     documentation: 'https://docs.lido.fi/',
     description:
@@ -1016,8 +994,7 @@ export const tokens = {
     address: '0x0f2D719407FdBeFF09D87557AbB7232601FD9F29',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x0f2D719407FdBeFF09D87557AbB7232601FD9F29.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x0f2D719407FdBeFF09D87557AbB7232601FD9F29.svg',
     website: 'https://synapseprotocol.com/landing',
     description:
       'Synapse is a universal interoperability protocol that enables secure cross-chain communication. Synapse connects blockchains by offering an extensible cross-chain messaging protocol that supports assets, smart contract calls, and more. By leveraging Synapse, blockchains can easily and securely interoperate with each other and developers can build truly cross-chain applications including cross-chain DEX, lending platforms, margining systems, derivatives markets, yield aggregators, and much more.',
@@ -1271,8 +1248,7 @@ export const tokens = {
     logoURI: '',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
-    description:
-      'Balancer linear pool that consist of 50/50 USDC and wrapped Euler Interest Bearing USDC.',
+    description: 'Balancer linear pool that consist of 50/50 USDC and wrapped Euler Interest Bearing USDC.',
   },
   bbeDAI: {
     name: 'Balancer Euler DAI Linear Pool',
@@ -1284,8 +1260,7 @@ export const tokens = {
     logoURI: '',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
-    description:
-      'Balancer linear pool that consist of 50/50 DAI and wrapped Euler Interest Bearing DAI.',
+    description: 'Balancer linear pool that consist of 50/50 DAI and wrapped Euler Interest Bearing DAI.',
   },
   bbeUSD: {
     name: 'Balancer Euler Stable Composable Pool',
@@ -1348,8 +1323,7 @@ export const tokens = {
     address: '0x30D20208d987713f46DFD34EF128Bb16C404D10f',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x3BC5AC0dFdC871B365d159f728dd1B9A0B5481E8.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x3BC5AC0dFdC871B365d159f728dd1B9A0B5481E8.svg',
     website: 'https://staderlabs.com/',
     description: 'Stader (SD) token is the native governance and value accrual token for Stader.',
     bridge: 'native',
@@ -1405,8 +1379,7 @@ export const tokens = {
     decimals: 18,
     logoURI: '',
     website: 'https://curve.finance/crvusd',
-    description:
-      'crvUSD is a collateralized-debt-position (CDP) stablecoin pegged to the US Dollar',
+    description: 'crvUSD is a collateralized-debt-position (CDP) stablecoin pegged to the US Dollar',
     bridge: 'native',
     documentation: 'https://docs.curve.finance/crvUSD/overview/',
   },
@@ -1444,8 +1417,7 @@ export const tokens = {
     chainId: 1,
     decimals: 18,
     logoURI: '',
-    website:
-      'https://app.reserve.org/ethereum/token/0xe72b141df173b999ae7c1adcbf60cc9833ce56a8/overview',
+    website: 'https://app.reserve.org/ethereum/token/0xe72b141df173b999ae7c1adcbf60cc9833ce56a8/overview',
     bridge: 'native',
     description:
       'Safety-first diversified ETH staking index with up to 4.5% APY backed by Lido Staked ETH and Rocket Pool ETH.',
@@ -1458,8 +1430,7 @@ export const tokens = {
     chainId: 1,
     decimals: 18,
     logoURI: '',
-    website:
-      'https://app.reserve.org/ethereum/token/0x005f893ecd7bf9667195642f7649da8163e23658/overview',
+    website: 'https://app.reserve.org/ethereum/token/0x005f893ecd7bf9667195642f7649da8163e23658/overview',
     bridge: 'native',
     description:
       "Degen ETH is a high-yield diversified ETH strategy index designed to sustainably outperform LST market yields. Degen ETH uses a two-token model: dgnETH, which is pegged to ETH and backed 1:1 by DeFi yield strategies, and sdgnETH, obtained by depositing dgnETH in a staking vault, which accrues all yield from dgnETH's underlying assets.",
@@ -1611,8 +1582,7 @@ export const tokens = {
     website: 'https://yprisma.yearn.fi/',
     documentation: 'https://docs.yearn.fi/getting-started/products/ylockers/yprisma/overview',
     bridge: 'native',
-    description:
-      "yPRISMA is Yearn's latest liquid locker, built for Prisma Finance's governance token.",
+    description: "yPRISMA is Yearn's latest liquid locker, built for Prisma Finance's governance token.",
   },
   LUSD: {
     name: 'LUSD Stablecoin',
@@ -1664,8 +1634,7 @@ export const tokens = {
     address: '0x2B218683178d029BAB6c9789b1073aA6c96E5176',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
     description: 'Balancer linear pool that consist of DAI and sDAI.',
@@ -1827,8 +1796,7 @@ export const tokens = {
     logoURI: '',
     website: 'https://www.silo.finance/',
     documentation: 'https://devdocs.silo.finance/protocol-architecture/protocol-overview',
-    description:
-      'Silo is a non-custodial lending protocol to borrow any crypto asset with another.',
+    description: 'Silo is a non-custodial lending protocol to borrow any crypto asset with another.',
     bridge: 'native',
   },
   vETH: {
@@ -1842,8 +1810,7 @@ export const tokens = {
     website: 'https://www.vectorreserve.com/',
     description:
       'vETH is a tokenized asset or index of ETH denominated Liquidity Positions (LP) against Liquid Staked Tokens (LST) and Liquid Restaked Tokens (LRT), that encapsulates both ETH and additional yield-generating opportunities.',
-    documentation:
-      'https://vector-reserve.gitbook.io/vector-reserve/introduction/what-is-vector-reserve',
+    documentation: 'https://vector-reserve.gitbook.io/vector-reserve/introduction/what-is-vector-reserve',
     bridge: 'native',
   },
   ankrETH: {
@@ -2011,8 +1978,7 @@ export const tokens = {
     chainId: 1,
     decimals: 18,
     logoURI: '',
-    website:
-      'https://app.reserve.org/ethereum/token/0x0d86883FAf4FfD7aEb116390af37746F45b6f378/overview',
+    website: 'https://app.reserve.org/ethereum/token/0x0d86883FAf4FfD7aEb116390af37746F45b6f378/overview',
     description:
       'USD3 is 1:1 asset backed by a basket of yield-bearing tokens. Given the unique design and current market conditions, it is estimated to yield up to 10% APY from the most reputable protocols using the most established assets. USD3 is overcollateralized with auditable proof of reserves available on-chain 24/7.',
     documentation: 'https://reserve.org/protocol/',
@@ -2026,8 +1992,7 @@ export const tokens = {
     chainId: 1,
     decimals: 18,
     logoURI: '',
-    website:
-      'https://app.reserve.org/ethereum/token/0x78da5799cf427fee11e9996982f4150ece7a99a7/overview',
+    website: 'https://app.reserve.org/ethereum/token/0x78da5799cf427fee11e9996982f4150ece7a99a7/overview',
     description:
       'rgUSD is an overcollateralized stablecoin launched on Reserve Protocol that acts as a collective point for DeFi users to negotiate with stablecoin yield providers for the best returns.',
     documentation: 'https://reserve.org/protocol/',
@@ -2133,8 +2098,7 @@ export const tokens = {
     description:
       'UNI is the governance token for Uniswap. UNI was introduced on 16th September 2020 through a retrospective airdrop to users who have interacted with the protocol either by swapping tokens or by providing liquidity.',
     bridge: 'native',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xbf5140a22578168fd562dccf235e5d43a02ce9b1.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xbf5140a22578168fd562dccf235e5d43a02ce9b1.png',
     documentation: 'https://docs.uniswap.org/concepts/governance/overview',
   },
   LINK: {
@@ -2200,8 +2164,7 @@ export const tokens = {
     description:
       'The USD0 Liquid Bond is issued when a user decides to lock their USD0 for a specified period. In return, they receive a composable and transferable USD0++ (as a LBT), which provides rewards in the form of USUAL tokens.',
     bridge: 'native',
-    documentation:
-      'https://gitbook.usual.money/usual-mechanisms/liquid-bond-token-lbt/usd0-liquid-bond',
+    documentation: 'https://gitbook.usual.money/usual-mechanisms/liquid-bond-token-lbt/usd0-liquid-bond',
   },
   pxETH: {
     name: 'Pirex Ether',
@@ -2356,8 +2319,7 @@ export const tokens = {
     decimals: 18,
     logoURI: '',
     website: 'https://www.inverse.finance/',
-    documentation:
-      'https://docs.inverse.finance/inverse-finance/inverse-finance/product-guide/dola-feds',
+    documentation: 'https://docs.inverse.finance/inverse-finance/inverse-finance/product-guide/dola-feds',
     description: 'Staked Dola from Inverse Finance.',
     bridge: 'native',
   },
@@ -2572,8 +2534,7 @@ export const tokens = {
     address: '0x7Bc3485026Ac48b6cf9BaF0A377477Fff5703Af8',
     chainId: 1,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description: 'Wrapped Aave interest bearing Ethereum USDT.',
@@ -2585,8 +2546,7 @@ export const tokens = {
     address: '0xD4fa2D31b7968E448877f69A96DE69f5de8cD23E',
     chainId: 1,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description: 'Wrapped Aave interest bearing Ethereum USDC.',
@@ -2598,8 +2558,7 @@ export const tokens = {
     address: '0xC71Ea051a5F82c67ADcF634c36FFE6334793D24C',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description: 'Wrapped Aave interest bearing Ethereum Lido GHO.',
@@ -2611,8 +2570,7 @@ export const tokens = {
     address: '0x5F9D59db355b4A60501544637b00e94082cA575b',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description: 'Wrapped Aave interest bearing Ethereum USDe.',
@@ -2624,8 +2582,7 @@ export const tokens = {
     address: '0x0FE906e030a44eF24CA8c7dC7B7c53A6C4F00ce9',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description: 'Wrapped Aave interest bearing Ethereum Lido WETH.',
@@ -2637,10 +2594,9 @@ export const tokens = {
     address: '0x775F661b0bD1739349b9A2A3EF60be277c5d2D29',
     chainId: 1,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description: 'Wrapped Aave interest bearing Ethereum Lido wstETH.',
   },
-} as const satisfies Record<string, Token>;
+});

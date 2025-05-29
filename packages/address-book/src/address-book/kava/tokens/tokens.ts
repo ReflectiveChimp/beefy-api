@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const KAVA = {
   name: 'Wrapped KAVA',
@@ -15,7 +16,7 @@ const KAVA = {
   bridge: 'native',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: KAVA,
   FEES: KAVA,
   KAVA,
@@ -27,8 +28,7 @@ export const tokens = {
     address: '0xfA9343C3897324496A05fC75abeD6bAC29f8A40f',
     chainId: 2222,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xB12BFcA5A55806AaF64E99521918A4bf0fC40802.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xB12BFcA5A55806AaF64E99521918A4bf0fC40802.svg',
     website: 'https://www.circle.com/usdc',
     description:
       'USDC (Multichain) is a fully collateralized US dollar stablecoin. USDC is issued by regulated financial institutions, backed by fully reserved assets, redeemable on a 1:1 basis for US dollars.',
@@ -126,8 +126,7 @@ export const tokens = {
     address: '0xEB466342C4d449BC9f53A865D5Cb90586f405215',
     chainId: 2222,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xB12BFcA5A55806AaF64E99521918A4bf0fC40802.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xB12BFcA5A55806AaF64E99521918A4bf0fC40802.svg',
     website: 'https://www.axelar.network/',
     bridge: 'axelar',
     description:
@@ -174,8 +173,7 @@ export const tokens = {
     documentation: 'https://equilibre-finance.gitbook.io/equilibre-finance/about-us/welcome',
     description:
       'Équilibre is an ve(3.3) AMM (Automatic Market Maker) based on Velodrome, and designed to provide large liquidity & low swapping fees.',
-    logoURI:
-      'https://raw.githubusercontent.com/equilibre-finance/token-images/blob/main/assets/VARA.png',
+    logoURI: 'https://raw.githubusercontent.com/equilibre-finance/token-images/blob/main/assets/VARA.png',
     bridge: 'native',
   },
   oldBIFI: {
@@ -329,4 +327,4 @@ export const tokens = {
       "LayerZero Wrapped WBTC (lzWBTC) is an ERC-20 token that represents a 1:1 pegged version of Bitcoin, allowing users to access Bitcoin's value and liquidity within the Kava ecosystem.",
     bridge: 'layer-zero',
   },
-} as const satisfies Record<string, Token>;
+});

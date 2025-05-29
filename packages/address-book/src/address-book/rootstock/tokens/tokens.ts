@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const RBTC = {
   name: 'Wrapped Rootstock BTC',
@@ -12,11 +13,10 @@ const RBTC = {
     'RBTC, the smart version of Bitcoin. Allowing BTC owners to interact with DeFi protocols and dApps on Rootstock network for minting, swaps, gas fees and more.',
   bridge: 'rootstock-canonical',
   logoURI: '',
-  documentation:
-    'https://dev.rootstock.io/concepts/rbtc/?_gl=1*jp93v6*_gcl_au*ODQ3NTgwNDM3LjE3MjcyNjIwNDI.',
+  documentation: 'https://dev.rootstock.io/concepts/rbtc/?_gl=1*jp93v6*_gcl_au*ODQ3NTgwNDM3LjE3MjcyNjIwNDI.',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: RBTC,
   FEES: RBTC,
   RBTC,
@@ -75,4 +75,4 @@ export const tokens = {
     logoURI: '',
     documentation: 'https://dev.rootstock.io/',
   },
-} as const satisfies Record<string, Token>;
+});

@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const FXS = {
   name: 'Wrapped Frax', // previously "Frax Share"
@@ -30,7 +31,7 @@ const frxETH = {
   documentation: 'https://docs.frax.finance/frax-ether/frxeth-and-sfrxeth',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: FXS, // now wFRAX, previously wfrxETH
   FEES: frxETH,
   FXS, // now FRAX
@@ -43,8 +44,7 @@ export const tokens = {
     symbol: 'frxUSD', // previously "FRAX",
     oracleId: 'FRAX', // keep the same so we don't lose historical data
     website: 'https://frax.finance/',
-    description:
-      'frxUSD (previously FRAX) is a crypto collateralized stablecoin pegged to the US dollar',
+    description: 'frxUSD (previously FRAX) is a crypto collateralized stablecoin pegged to the US dollar',
     bridge: 'fraxtal-canonical',
     logoURI: '',
     documentation: 'https://docs.frax.finance/',
@@ -89,8 +89,7 @@ export const tokens = {
     logoURI: '',
     bridge: 'fraxtal-canonical',
     website: 'https://curve.finance/crvusd',
-    description:
-      'crvUSD is a collateralized-debt-position (CDP) stablecoin pegged to the US Dollar',
+    description: 'crvUSD is a collateralized-debt-position (CDP) stablecoin pegged to the US Dollar',
     documentation: 'https://docs.curve.finance/crvUSD/crvUSD/',
   },
   frxUSDC: {
@@ -232,8 +231,7 @@ export const tokens = {
     bridge: 'fraxtal-canonical',
     logoURI:
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png',
-    documentation:
-      'https://docs.makerdao.com/smart-contract-modules/dai-module/dai-detailed-documentation',
+    documentation: 'https://docs.makerdao.com/smart-contract-modules/dai-module/dai-detailed-documentation',
   },
   sDAI: {
     name: 'Savings DAI',
@@ -343,4 +341,4 @@ export const tokens = {
     bridge: 'layer-zero',
     documentation: 'https://docs.frax.finance/',
   },
-} as const satisfies Record<string, Token>;
+});

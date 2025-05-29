@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const ETH = {
   name: 'Wrapped Ether',
@@ -14,7 +15,7 @@ const ETH = {
   documentation: 'https://ethereum.org/en/developers/docs/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: ETH,
   FEES: ETH,
   ETH,
@@ -172,4 +173,4 @@ export const tokens = {
       'At BMX, wrapped-MLT (wMLT) is a token received as a result of depositing MLT into BMX’s native Yearn-architectured, auto-compounding reward vault. wMLT functions as a receipt token representing a claim on the underlying MLT within the vault.',
     bridge: 'native',
   },
-} as const satisfies Record<string, Token>;
+});

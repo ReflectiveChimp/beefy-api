@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const MNT = {
   name: 'Wrapped Mantle',
@@ -15,7 +16,7 @@ const MNT = {
   documentation: 'https://docs.mantle.xyz/governance/introduction/overview',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: MNT,
   FEES: MNT,
   MNT,
@@ -220,4 +221,4 @@ export const tokens = {
     bridge: 'stargate',
     risks: ['NO_TIMELOCK'],
   },
-} as const satisfies Record<string, Token>;
+});

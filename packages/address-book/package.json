@@ -1,46 +1,45 @@
 {
   "name": "blockchain-addressbook",
-  "version": "0.54.17",
+  "version": "0.54.18",
   "description": "A collection of useful addresses on various chains for defi development",
-  "type": "commonjs",
-  "types": "./build/address-book/index.d.ts",
+  "type": "module",
+  "main": "./build/esm/address-book/index.js",
+  "types": "./build/esm/address-book/index.d.ts",
   "exports": {
     ".": {
-      "import": "./build-esm/address-book/index.js",
-      "require": "./build/address-book/index.js"
+      "import": "./build/esm/address-book/index.js",
+      "types": "./build/esm/address-book/index.d.ts",
+      "require": "./build/cjs/address-book/index.js"
     },
     "./*": {
-      "import": "./build-esm/address-book/*/index.js",
-      "require": "./build/address-book/*/index.js"
+      "import": "./build/esm/address-book/*/index.js",
+      "types": "./build/esm/address-book/*/index.d.ts",
+      "require": "./build/cjs/address-book/*/index.js"
     },
-    "./build/types/token": {
-      "import": "./build-esm/types/token.js",
-      "require": "./build/types/token.js"
+    "./utils": {
+      "import": "./build/esm/util/index.js",
+      "types": "./build/esm/util/index.d.ts",
+      "require": "./build/cjs/util/index.js"
     }
   },
-  "main": "./build/address-book/index.js",
-  "files": [
-    "./build",
-    "./build-esm"
-  ],
+  "files": ["./build"],
   "repository": "beefyfinance/beefy-api",
   "license": "MIT",
   "scripts": {
-    "addChain": "ts-node ./scripts/addChain.ts",
-    "compile": "yarn compile:cjs && yarn compile:esm",
-    "compile:cjs": "tsc --project tsconfig.cjs.json && echo '{\"type\": \"commonjs\"}' > ./build/package.json",
-    "compile:esm": "tsc --project tsconfig.esm.json && echo '{\"type\": \"module\"}' > ./build-esm/package.json",
-    "checksum": "ts-node ./scripts/checksum.ts",
-    "checkDecimals": "ts-node --transpileOnly ./scripts/checkDecimals.ts",
-    "checkOracles": "ts-node --transpileOnly scripts/checkOracles.ts",
-    "checkDuplicates": "ts-node --transpileOnly ./scripts/checkDuplicates.ts",
-    "submit": "yarn checksum && yarn compile && yarn publish",
-    "test": "yarn test:ts && yarn test:lint",
-    "test:ts": "yarn test:ts:cjs && yarn test:ts:esm",
+    "addChain": "bun run ./scripts/addChain.ts",
+    "build:cjs": "tsc --project tsconfig.cjs.json && echo '{\"type\": \"commonjs\"}' > ./build/cjs/package.json",
+    "build:esm": "tsc --project tsconfig.esm.json && echo '{\"type\": \"module\"}' > ./build/esm/package.json",
+    "checksum": "bun run ./scripts/checksum.ts",
+    "checkDecimals": "bun run --transpileOnly ./scripts/checkDecimals.ts",
+    "checkOracles": "bun run --transpileOnly scripts/checkOracles.ts",
+    "checkDuplicates": "bun run --transpileOnly ./scripts/checkDuplicates.ts",
+    "submit": "bun run checksum && bun run build && bun run publish",
+    "test": "bun run test:ts && bun run test:lint",
+    "test:ts": "bun run test:ts:cjs && bun run test:ts:esm",
     "test:ts:cjs": "tsc --noEmit --project tsconfig.cjs.json",
     "test:ts:esm": "tsc --noEmit --project tsconfig.esm.json",
-    "test:lint": "yarn lint",
-    "lint": "yarn lint:eslint:check && yarn lint:prettier:check",
+    "test:lint": "bun run lint",
+    "lint": "bun run lint:eslint:check && bun run lint:prettier:check",
     "lint:prettier:check": "prettier --check ./{src,scripts}/**/*.ts",
     "lint:prettier:fix": "prettier --write ./{src,scripts}/**/*.ts",
     "lint:eslint:check": "eslint",
@@ -54,8 +53,8 @@
     "cross-env": "^7.0.3",
     "eslint": "^9.5.0",
     "prettier": "^3.3.2",
-    "ts-node": "^10.9.2",
     "typescript": "^5.5.2",
     "typescript-eslint": "^7.13.1"
-  }
+  },
+  "packageManager": "bun@1.2.14"
 }

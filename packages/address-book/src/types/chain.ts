@@ -2,7 +2,7 @@ import type { BeefyFinance } from './beefyfinance.js';
 import type { Token, TokenWithId } from './token.js';
 
 export interface Chain {
-  readonly platforms: Record<string, Record<string, string>> & {
+  readonly platforms: Record<string, Record<string, string | undefined>> & {
     beefyfinance: BeefyFinance;
   };
   readonly tokens: { WNATIVE: Token; FEES: Token } & { [id: string]: Token };

@@ -1,0 +1,56 @@
+import getBalancerPrices from '../api/stats/common/balancer/getBalancerPrices.js';
+import balancerArbLinearPools from '../data/arbitrum/balancerLinearPools.json';
+import balancerLinearPools from '../data/ethereum/balancerLinearPools.json';
+import bbaUSD from '../data/ethereum/bbaUSD.json';
+import balancerPolyLinearPools from '../data/matic/balancerLinearPools.json';
+import bbamUSD from '../data/matic/bbamUSD.json';
+import beetsLinearPools from '../data/optimism/beethovenxLinearPools.json';
+
+const stablePoolPools = [...bbaUSD, ...bbamUSD];
+const linearPoolPools = [
+  ...beetsLinearPools,
+  ...balancerLinearPools,
+  ...balancerPolyLinearPools,
+  ...balancerArbLinearPools,
+];
+
+const fetchBalancerStablePoolPrice = async (tokenPrices) => {
+  const prices = {};
+  const results = await fetchPoolPrice(tokenPrices, stablePoolPools);
+
+  return { ...prices, ...results };
+};
+
+const fetchBalancerLinearPoolPrice = async (tokenPrices) => {
+  const prices = {};
+  const results = await fetchPoolPrice(tokenPrices, linearPoolPools);
+
+  return { ...prices, ...results };
+};
+
+const fetchPoolPrice = async (tokenPrices, pools) => {
+  const chainIds = pools.map((p) => p.chainId);
+  const uniqueChainIds = [...new Set(chainIds)];
+  let prices = {};
+
+  for (let i = 0; i < uniqueChainIds.length; i++) {
+    const filtered = pools.filter((p) => p.chainId == uniqueChainIds[i]);
+    const results = await getPrice(uniqueChainIds[i], filtered, tokenPrices);
+    prices = { ...prices, ...results };
+  }
+
+  return prices;
+};
+
+const getPrice = async (chainId, pools, tokenPrices) => {
+  let prices = {};
+  const results = await getBalancerPrices(chainId, pools, tokenPrices);
+  for (const [key, value] of Object.entries(results)) {
+    const price = { [key]: value.price };
+    prices = { ...prices, ...price };
+  }
+
+  return prices;
+};
+
+export { fetchBalancerStablePoolPrice, fetchBalancerLinearPoolPrice };

@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const GAS = {
   name: 'Wrapped GAS',
@@ -8,8 +9,7 @@ const GAS = {
   decimals: 18,
   chainId: 5464,
   website: 'https://www.saga.xyz/',
-  description:
-    'Meta-token for gas on Saga. Saga is gasless for users. Do not use the token at this address.',
+  description: 'Meta-token for gas on Saga. Saga is gasless for users. Do not use the token at this address.',
   bridge: 'native',
   documentation: 'https://docs.saga.xyz/',
 } as const satisfies Token;
@@ -29,7 +29,7 @@ const USDC = {
   documentation: 'https://www.circle.com/en/usdc-multichain/arbitrum',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: GAS,
   FEES: USDC,
   GAS,
@@ -89,4 +89,4 @@ export const tokens = {
     bridge: 'saga-canonical',
     documentation: 'https://www.uniswap.org/',
   },
-} as const satisfies Record<string, Token>;
+});

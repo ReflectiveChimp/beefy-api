@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const ETH = {
   name: 'Wrapped Ether',
@@ -14,7 +15,7 @@ const ETH = {
   documentation: 'https://ethereum.org/en/developers/docs/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: ETH,
   FEES: ETH,
   ETH,
@@ -40,8 +41,7 @@ export const tokens = {
     address: '0xd5046B976188EB40f6DE40fB527F89c05b323385',
     chainId: 8453,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xd5046B976188EB40f6DE40fB527F89c05b323385.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xd5046B976188EB40f6DE40fB527F89c05b323385.svg',
     website: 'https://baseswap.fi/',
     description:
       'BSX is the incentives token of BaseSwap, rewarded to liquidity providers in the BaseSwap ecosystem. xBSX is the escrow version of BSX and can be vested over time.',
@@ -55,8 +55,7 @@ export const tokens = {
     address: '0x23E1A3BcDcEE4C59209d8871140eB7DD2bD9d1cE',
     chainId: 8453,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x23E1A3BcDcEE4C59209d8871140eB7DD2bD9d1cE.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x23E1A3BcDcEE4C59209d8871140eB7DD2bD9d1cE.svg',
     website: 'https://www.baso.finance/',
     description:
       'BASO is the governance token of Baso Finance, a Velodrome inspired DEX. Liquidity providers are rewarded with BASO and veBASO holders vote on liquidity pools to receive bribes and trading fees.',
@@ -126,8 +125,7 @@ export const tokens = {
     address: '0x6B4712AE9797C199edd44F897cA09BC57628a1CF',
     chainId: 8453,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x6B4712AE9797C199edd44F897cA09BC57628a1CF.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x6B4712AE9797C199edd44F897cA09BC57628a1CF.svg',
     website: 'https://app.unidex.exchange/trading',
     description:
       'UniDex is building on top of the existing landscape by introducing a perpetual leverage trading platform that will allow any synthetic asset to be traded in a permissionless, transparent, and trader-focused platform for any person to tap into.',
@@ -141,8 +139,7 @@ export const tokens = {
     address: '0x1a35EE4640b0A3B87705B0A4B45D227Ba60Ca2ad',
     chainId: 8453,
     decimals: 8,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x1a35EE4640b0A3B87705B0A4B45D227Ba60Ca2ad.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x1a35EE4640b0A3B87705B0A4B45D227Ba60Ca2ad.svg',
     website: 'https://wbtc.network/',
     description: 'Wrapped Bitcoin (WBTC) is the first ERC20 token backed 1:1 with Bitcoin.',
     documentation: 'https://wbtc.network/',
@@ -155,8 +152,7 @@ export const tokens = {
     address: '0xd07379a755A8f11B57610154861D694b2A0f615a',
     chainId: 8453,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xd07379a755A8f11B57610154861D694b2A0f615a.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xd07379a755A8f11B57610154861D694b2A0f615a.svg',
     website: 'https://swapbased.finance/#/',
     description: 'BASE is the governance token of SwapBased, a DEX built on the Base blockchain.',
     documentation: 'https://docs.swapbased.finance/',
@@ -169,8 +165,7 @@ export const tokens = {
     address: '0xFF8adeC2221f9f4D8dfbAFa6B9a297d17603493D',
     chainId: 8453,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x511aB53F793683763E5a8829738301368a2411E3.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x511aB53F793683763E5a8829738301368a2411E3.svg',
     website: 'https://moonwell.fi/',
     description: 'WELL is the native governance token of the Moonwell protocol',
     bridge: 'wormhole',
@@ -196,8 +191,7 @@ export const tokens = {
     address: '0xB79DD08EA68A908A97220C76d19A6aA9cBDE4376',
     chainId: 8453,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xB79DD08EA68A908A97220C76d19A6aA9cBDE4376.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xB79DD08EA68A908A97220C76d19A6aA9cBDE4376.svg',
     website: 'https://overnight.fi/',
     description:
       'USD+ is USDC that pays you yield daily via rebase. It is 100% collateralized with assets immediately convertible into USDC. Yield is generated via strategies such as lending and stable-to-stable pools. Initial strategies include Aave, Rubicon, and Pika.',
@@ -211,8 +205,7 @@ export const tokens = {
     address: '0x65a2508C429a6078a7BC2f7dF81aB575BD9D9275',
     chainId: 8453,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x65a2508C429a6078a7BC2f7dF81aB575BD9D9275.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x65a2508C429a6078a7BC2f7dF81aB575BD9D9275.svg',
     website: 'https://overnight.fi/',
     description:
       'DAI+ is DAI that pays you yield daily via rebase.  It is 100% collateralized with assets immediately convertible into DAI.  Yield is generated via strategies such as lending and stable-to-stable pools. Initial strategies include Aave, Rubicon, and Pika.',
@@ -240,8 +233,7 @@ export const tokens = {
     address: '0x4A3A6Dd60A34bB2Aba60D73B4C88315E9CeB6A3D',
     chainId: 8453,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4A3A6Dd60A34bB2Aba60D73B4C88315E9CeB6A3D.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4A3A6Dd60A34bB2Aba60D73B4C88315E9CeB6A3D.svg',
     website: 'https://docs.abracadabra.money/',
     description:
       'You, the Spellcaster, can provide collateral in the form of various interest bearing crypto assets such as yvYFI, yvUSDT, yvUSDC, xSUSHI and more. With this, you can borrow magic internet money (MIM) which is a stable coin that you can swap for any other traditional stable coin.',
@@ -255,13 +247,11 @@ export const tokens = {
     address: '0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22',
     chainId: 8453,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22.svg',
     website: 'https://help.coinbase.com/en/coinbase/trading-and-funding/staking-rewards/cbeth',
     description:
       "Coinbase Wrapped Staked ETH (“cbETH”) is a utility token that represents Ethereum 2 (ETH2), which is ETH staked through Coinbase. Over time, the price of cbETH will likely deviate from ETH because cbETH represents 1 staked ETH plus all of its accrued staking interest starting from when cbETH's conversion rate and balance were initialized (June 16, 2022 19:34 UTC). cbETH is minted exclusively by Coinbase.",
-    documentation:
-      'https://help.coinbase.com/en/coinbase/trading-and-funding/staking-rewards/cbeth',
+    documentation: 'https://help.coinbase.com/en/coinbase/trading-and-funding/staking-rewards/cbeth',
     bridge: 'native',
   },
   axlUSDC: {
@@ -271,8 +261,7 @@ export const tokens = {
     address: '0xEB466342C4d449BC9f53A865D5Cb90586f405215',
     chainId: 8453,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xEB466342C4d449BC9f53A865D5Cb90586f405215.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xEB466342C4d449BC9f53A865D5Cb90586f405215.svg',
     website: 'https://www.axelar.network/',
     bridge: 'axelar',
     description:
@@ -300,8 +289,7 @@ export const tokens = {
     address: '0xAB8a1c03b8E4e1D21c8Ddd6eDf9e07f26E843492',
     chainId: 8453,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xAB8a1c03b8E4e1D21c8Ddd6eDf9e07f26E843492.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xAB8a1c03b8E4e1D21c8Ddd6eDf9e07f26E843492.svg',
     website: '',
     description: 'Meme coin on Base.',
     documentation: '',
@@ -344,8 +332,7 @@ export const tokens = {
     logoURI: '',
     website: 'https://makerdao.com/en/',
     bridge: 'base-canonical',
-    documentation:
-      'https://docs.makerdao.com/smart-contract-modules/dai-module/dai-detailed-documentation',
+    documentation: 'https://docs.makerdao.com/smart-contract-modules/dai-module/dai-detailed-documentation',
     description:
       'Dai is a stablecoin cryptocurrency which aims to keep its value as close to one United States dollar as possible through an automated system of smart contracts on the Ethereum blockchain',
   },
@@ -441,8 +428,7 @@ export const tokens = {
     decimals: 18,
     logoURI: '',
     website: 'https://curve.finance/crvusd',
-    description:
-      'crvUSD is a collateralized-debt-position (CDP) stablecoin pegged to the US Dollar',
+    description: 'crvUSD is a collateralized-debt-position (CDP) stablecoin pegged to the US Dollar',
     documentation: 'https://docs.curve.finance/crvUSD/overview/',
     bridge: 'base-canonical',
   },
@@ -453,13 +439,11 @@ export const tokens = {
     address: '0x6FbFcf88DB1aADA31F34215b2a1Df7fafb4883e9',
     chainId: 8453,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     bridge: 'native',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
-    description:
-      'Balancer composable pool that consist of USDbC and DAI. bbTokens are boosted linear pools.',
+    description: 'Balancer composable pool that consist of USDbC and DAI. bbTokens are boosted linear pools.',
   },
   BVM: {
     name: 'Base Velocimeter',
@@ -552,8 +536,7 @@ export const tokens = {
     chainId: 8453,
     decimals: 18,
     logoURI: '',
-    website:
-      'https://app.reserve.org/ethereum/token/0xa0d69e286b938e21cbf7e51d71f6a4c8918f482f/overview',
+    website: 'https://app.reserve.org/ethereum/token/0xa0d69e286b938e21cbf7e51d71f6a4c8918f482f/overview',
     description:
       'The Electronic Dollar (eUSD) is a decentralized 1:1 asset-backed stablecoin built with Reserve Protocol, available on the Ethereum and MobileCoin blockchains. It sets itself apart from other stablecoins due to its decentralized, community-governed, and censorship-resistant nature.',
     documentation: 'https://reserve.org/protocol/',
@@ -609,8 +592,7 @@ export const tokens = {
     chainId: 8453,
     decimals: 18,
     logoURI: '',
-    website:
-      'https://app.reserve.org/base/token/0xcb327b99ff831bf8223cced12b1338ff3aa322ff/overview',
+    website: 'https://app.reserve.org/base/token/0xcb327b99ff831bf8223cced12b1338ff3aa322ff/overview',
     description:
       'A yield generating Ethereum Liquid Staking Token basket with over-collateralization protection. ',
     documentation: 'https://reserve.org/protocol/',
@@ -651,8 +633,7 @@ export const tokens = {
     address: '0x9E53e88dCff56d3062510A745952DEC4cEFDff9E',
     chainId: 8453,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x9E53e88dCff56d3062510A745952DEC4cEFDff9E.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x9E53e88dCff56d3062510A745952DEC4cEFDff9E.svg',
     website: 'https://basicdog.xyz/',
     description: 'The first meme coin on Base. Fairly Launched. Organic Growth. Good Vibes.',
     documentation: 'https://basicdog.gitbook.io/basic-meme-chain/',
@@ -669,8 +650,7 @@ export const tokens = {
     website: 'https://www.synthetix.io/',
     description:
       'Synthetix is the backbone for derivatives trading in DeFi, allowing anyone, anywhere to gain on-chain exposure to a vast range of assets.',
-    documentation:
-      'https://docs.synthetix.io/synthetix-protocol/the-synthetix-protocol/synthetix-token-snx',
+    documentation: 'https://docs.synthetix.io/synthetix-protocol/the-synthetix-protocol/synthetix-token-snx',
     bridge: 'base-canonical',
   },
   T: {
@@ -738,8 +718,7 @@ export const tokens = {
     oracleId: 'rgUSD',
     decimals: 18,
     logoURI: '',
-    website:
-      'https://app.reserve.org/ethereum/token/0x78da5799cf427fee11e9996982f4150ece7a99a7/overview',
+    website: 'https://app.reserve.org/ethereum/token/0x78da5799cf427fee11e9996982f4150ece7a99a7/overview',
     description:
       'rgUSD is an overcollateralized stablecoin launched on Reserve Protocol that acts as a collective point for DeFi users to negotiate with stablecoin yield providers for the best returns.',
     documentation: 'https://reserve.org/protocol/',
@@ -962,8 +941,7 @@ export const tokens = {
     decimals: 18,
     logoURI: '',
     website: 'https://www.happypuppyclub.xyz/',
-    description:
-      'The Happy Puppy Club ($HPC) memecoin embodies the spirit of "we in the club, onchain".',
+    description: 'The Happy Puppy Club ($HPC) memecoin embodies the spirit of "we in the club, onchain".',
     bridge: 'native',
   },
   ROCK: {
@@ -1018,8 +996,7 @@ export const tokens = {
     decimals: 18,
     logoURI: '',
     website: 'https://www.normilio.com/',
-    description:
-      'A community driven project that aims to bring the normalest memecoin to the base.',
+    description: 'A community driven project that aims to bring the normalest memecoin to the base.',
     bridge: 'native',
   },
   POOL: {
@@ -1157,8 +1134,7 @@ export const tokens = {
     address: '0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2',
     chainId: 8453,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://tether.to/',
     documentation: 'https://tether.to/en/how-it-works',
     description:
@@ -1203,8 +1179,7 @@ export const tokens = {
     logoURI: '',
     website: 'https://www.basednormus.com/',
     documentation: 'https://www.basednormus.com/',
-    description:
-      'NORMUS is the governance token of the launchpad eNORMUSPUMP, a pump.fun fork on Base.',
+    description: 'NORMUS is the governance token of the launchpad eNORMUSPUMP, a pump.fun fork on Base.',
     bridge: 'native',
   },
   jEUR: {
@@ -1391,11 +1366,9 @@ export const tokens = {
     address: '0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf',
     chainId: 8453,
     decimals: 8,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x1a35EE4640b0A3B87705B0A4B45D227Ba60Ca2ad.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x1a35EE4640b0A3B87705B0A4B45D227Ba60Ca2ad.svg',
     website: 'https://www.coinbase.com/',
-    description:
-      'Coinbase Wrapped Bitcoin (cbBTC) is backed 1:1 with Bitcoin, custodied with Coinbase.',
+    description: 'Coinbase Wrapped Bitcoin (cbBTC) is backed 1:1 with Bitcoin, custodied with Coinbase.',
     documentation: 'https://www.coinbase.com/blog/coinbase-wrapped-btc-cbbtc-is-now-live',
     bridge: 'native',
   },
@@ -2677,8 +2650,7 @@ export const tokens = {
     decimals: 18,
     website: 'https://truemarkets.org/',
     documentation: 'https://truemarkets.gitbook.io/truemarkets',
-    description:
-      'Truemarkets is a news and information source on the frontier of alternative media.',
+    description: 'Truemarkets is a news and information source on the frontier of alternative media.',
     bridge: 'native',
   },
   noice: {
@@ -2709,4 +2681,4 @@ export const tokens = {
       'BOLD is the USD-pegged stablecoin issued in Liquity V2. It is over-collateralized and backed only by WETH, wstETH, and rETH.',
     bridge: 'chainlink-ccip',
   },
-} as const satisfies Record<string, Token>;
+});

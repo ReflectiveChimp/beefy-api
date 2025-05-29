@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const HT = {
   name: 'Wrapped HT',
@@ -13,7 +14,7 @@ const HT = {
   logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/8524.png',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: HT,
   FEES: HT,
   HT,
@@ -260,4 +261,4 @@ export const tokens = {
       'HFIL is a ERC20 token backed 1:1 with FIL. H-tokens are a suite of assets issued on Ethereum and backed by cryptocurrencies from other blockchains.',
     logoURI: 'https://hecoinfo.com/token/images/HFIL_32.png',
   },
-} as const satisfies Record<string, Token>;
+});

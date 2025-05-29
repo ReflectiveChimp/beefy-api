@@ -1,7 +1,9 @@
+import type { BeefyFinance } from '../../../types/beefyfinance.js';
+
 const devMultisig = '0xe26a8aC2936F338Fd4DAebA4BD22a7ec86465fE1';
 const treasuryMultisig = '0x1C124c2CaB83b3C3B5D0f0899CeeA5e06964599F';
 
-export const beefyfinance = {
+export const beefyfinance: BeefyFinance = {
   devMultisig,
   treasuryMultisig,
   strategyOwner: '0xa9E6E271b27b20F65394914f8784B3B860dBd259',
@@ -18,4 +20,4 @@ export const beefyfinance = {
   voter: '0x5e1caC103F943Cd84A1E92dAde4145664ebf692A',
   zap: '0xd3DFCD52001D0662DFA8A9eEa5C3379BA0b4452C',
   zapTokenManager: '0x957803E12453B5881c9A543fF305a3151c9DdaC9',
-} as const;
+};

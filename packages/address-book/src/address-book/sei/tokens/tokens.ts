@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const SEI = {
   name: 'Wrapped SEI',
@@ -15,7 +16,7 @@ const SEI = {
   documentation: 'https://www.docs.sei.io/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: SEI,
   FEES: SEI,
   SEI,
@@ -72,4 +73,4 @@ export const tokens = {
     logoURI: '',
     documentation: 'https://silostaking.gitbook.io/silo-staking',
   },
-} as const satisfies Record<string, Token>;
+});

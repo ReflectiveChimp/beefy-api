@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const S = {
   name: 'Wrapped S',
@@ -15,7 +16,7 @@ const S = {
   documentation: 'https://www.soniclabs.com/developer-resources',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: S,
   FEES: S,
   S,
@@ -402,8 +403,7 @@ export const tokens = {
     decimals: 18,
     logoURI: '',
     website: 'https://www.silo.finance/',
-    description:
-      'Silo is a non-custodial lending protocol to borrow any crypto asset with another.',
+    description: 'Silo is a non-custodial lending protocol to borrow any crypto asset with another.',
     documentation: 'https://devdocs.silo.finance/',
     bridge: 'sonic-canonical',
     risks: ['NO_TIMELOCK'],
@@ -519,4 +519,4 @@ export const tokens = {
     documentation: 'https://docs.rings.money/',
     bridge: 'layer-zero',
   },
-} as const satisfies Record<string, Token>;
+});

@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const AVAX = {
   chainId: 43114,
@@ -16,7 +17,7 @@ const AVAX = {
   documentation: 'https://docs.avax.network/learn/avalanche/avax',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: AVAX,
   FEES: AVAX,
   AVAX,
@@ -159,8 +160,7 @@ export const tokens = {
     address: '0x240248628B7B6850352764C5dFa50D1592A033A8',
     chainId: 43114,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x152b9d0FdC40C096757F570A51E494bd4b943E50.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x152b9d0FdC40C096757F570A51E494bd4b943E50.svg',
     website: 'https://swapsicle.io/',
     description: 'Swapsicle is a decentralised exchange and its own utility token POPS. ',
   },
@@ -171,8 +171,7 @@ export const tokens = {
     address: '0x152b9d0FdC40C096757F570A51E494bd4b943E50',
     chainId: 43114,
     decimals: 8,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x152b9d0FdC40C096757F570A51E494bd4b943E50.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x152b9d0FdC40C096757F570A51E494bd4b943E50.svg',
     website: 'https://bridge.avax.network/',
     description: 'official AVAX BRIDGE bridged BTC',
     bridge: 'avax-canonical',
@@ -274,8 +273,7 @@ export const tokens = {
     chainId: 43114,
     decimals: 18,
     website: 'https://topshelf.finance/',
-    description:
-      'Mint fully decentralized sythentic assets on Binance Smart Chain, Fantom & Avalanche.',
+    description: 'Mint fully decentralized sythentic assets on Binance Smart Chain, Fantom & Avalanche.',
     logoURI: '',
   },
   MONEY: {
@@ -323,8 +321,7 @@ export const tokens = {
     address: '0x29e38769f23701A2e4A8Ef0492e19dA4604Be62c',
     chainId: 43114,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://tether.to/',
     description:
       'Tether is a stablecoin pegged to the US Dollar. A stablecoin is a type of cryptocurrency whose value is pegged to another fiat currency like the US Dollar or to a commodity like Gold. Tether is the first stablecoin to be created and it is the most popular stablecoin used in the ecosystem.',
@@ -636,8 +633,7 @@ export const tokens = {
     address: '0x260Bbf5698121EB85e7a74f2E45E16Ce762EbE11',
     chainId: 43114,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x260Bbf5698121EB85e7a74f2E45E16Ce762EbE11.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x260Bbf5698121EB85e7a74f2E45E16Ce762EbE11.svg',
     website: 'https://www.terra.money/',
     description:
       'Terra stablecoins offer instant settlements, low fees and seamless cross-border exchange - loved by millions of users and merchants.',
@@ -649,8 +645,7 @@ export const tokens = {
     address: '0xd9D90f882CDdD6063959A9d837B05Cb748718A05',
     chainId: 43114,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xd9D90f882CDdD6063959A9d837B05Cb748718A05.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xd9D90f882CDdD6063959A9d837B05Cb748718A05.svg',
     website: 'https://app.moremoney.finance/',
     description:
       'Moremoney is a lending protocol for opening interest-free collateralised debt positions (CDP) using liquidity pool tokens, interest-bearing tokens (ibTKNs) and other major tokens as collateral. Borrowers mint MONEY, a USD softly pegged stablecoin backed by an over-collateralised debt position as well as the yield earned by the collateral.  After minting MONEY, borrowers can use it across the DeFi landscape, for interest free leverage, or simply use it to farm MORE. Moremoney is designed to support the further conversion of base tokens like ETH, AVAX, USDT into ibTKNs. Upon depositing, collateral assets are forwarded to trusted partner protocols where these tokens earn yield, which is either compounded into collateral token or into $MONEY to automatically repay debts owed by a vault.',
@@ -662,8 +657,7 @@ export const tokens = {
     address: '0xE5CAeF4Af8780E59Df925470b050Fb23C43CA68C',
     chainId: 43114,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xE5CAeF4Af8780E59Df925470b050Fb23C43CA68C.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xE5CAeF4Af8780E59Df925470b050Fb23C43CA68C.svg',
     website: 'https://ferrum.network/',
     description:
       'Ferrum Network is a cross-chain Blockchain as a Service DeFi company that specializes in adding deflationary token utility and advisory services to projects across the crypto space. With the mission of breaking down barriers to mass adoption in mind, Ferrum builds white-label blockchain solutions that empower startups and established organizations, enabling them to get their core products to market faster.Become Cross-Chain Compatible Today',
@@ -690,8 +684,7 @@ export const tokens = {
     website: 'https://www.olympusdao.finance/',
     description:
       'Olympus is building a community-owned decentralized financial infrastructure to bring more stability and transparency for the world.',
-    logoURI:
-      'https://assets.coingecko.com/coins/images/14483/large/token_OHM_%281%29.png?1628311611',
+    logoURI: 'https://assets.coingecko.com/coins/images/14483/large/token_OHM_%281%29.png?1628311611',
   },
   QI: {
     chainId: 43114,
@@ -865,8 +858,7 @@ export const tokens = {
     website: 'https://www.binance.com/',
     description:
       'Binance Coin (BNB) is an exchange-based token created and issued by the cryptocurrency exchange Binance. Initially created on the Ethereum blockchain as an ERC-20 token in July 2017, BNB was migrated over to Binance Chain in February 2019 and became the native coin of the Binance Chain.',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png',
   },
   PNG: {
     chainId: 43114,
@@ -4754,8 +4746,7 @@ export const tokens = {
     name: 'YetiSwap',
     symbol: 'YTS',
     oracleId: 'YTS',
-    logoURI:
-      'https://raw.githubusercontent.com/YetiSwap/yetiswap.app/master/src/assets/image/YTSCoin.png',
+    logoURI: 'https://raw.githubusercontent.com/YetiSwap/yetiswap.app/master/src/assets/image/YTSCoin.png',
   },
   'ZERO-Zero.Exchange Token': {
     chainId: 43114,
@@ -4793,8 +4784,7 @@ export const tokens = {
     name: 'Spore',
     symbol: 'SPORE',
     oracleId: 'SPORE',
-    logoURI:
-      'https://raw.githubusercontent.com/sporeproject/Spore-frontend/master/src/utils/SPORE.png',
+    logoURI: 'https://raw.githubusercontent.com/sporeproject/Spore-frontend/master/src/utils/SPORE.png',
   },
   PEFI: {
     chainId: 43114,
@@ -4881,8 +4871,7 @@ export const tokens = {
     name: 'Cycle Protocol',
     symbol: 'CYCLE',
     oracleId: 'CYCLE',
-    logoURI:
-      'https://raw.githubusercontent.com/CycleProtocol/assets/master/cycle-logo-round-small.png',
+    logoURI: 'https://raw.githubusercontent.com/CycleProtocol/assets/master/cycle-logo-round-small.png',
   },
   'BIRD-Birdy Finance': {
     chainId: 43114,
@@ -4912,8 +4901,7 @@ export const tokens = {
     name: 'TeslaBitcoin',
     symbol: 'TESLABTC',
     oracleId: 'TESLABTC',
-    logoURI:
-      'https://raw.githubusercontent.com/crackfi/tesla_btc_logo/master/Tesla_Bitcoin_logo.png',
+    logoURI: 'https://raw.githubusercontent.com/crackfi/tesla_btc_logo/master/Tesla_Bitcoin_logo.png',
   },
   USDTe: {
     chainId: 43114,
@@ -5027,8 +5015,7 @@ export const tokens = {
     description:
       'USDC is a fully collateralized US dollar stablecoin. USDC is issued by regulated financial institutions, backed by fully reserved assets, redeemable on a 1:1 basis for US dollars.',
     bridge: 'avax-canonical',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d.png',
     documentation: 'https://developers.circle.com/docs',
   },
   MIM: {
@@ -5064,8 +5051,7 @@ export const tokens = {
     address: '0xA32608e873F9DdEF944B24798db69d80Bbb4d1ed',
     chainId: 43114,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xA32608e873F9DdEF944B24798db69d80Bbb4d1ed.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xA32608e873F9DdEF944B24798db69d80Bbb4d1ed.svg',
     website: 'https://www.crabada.com/',
     description:
       'Rediscover the prosperous ancient Crabada Kingdom once ruled by Crustaco, King of the Crabada. Mine. Loot. Breed. Expand your forces. Earn CRA tokens by playing and use them to determine the future of the Kingdom!',
@@ -5077,8 +5063,7 @@ export const tokens = {
     address: '0x5eDE350E84223fb50775fD91a723F2ca71034cf7',
     chainId: 43114,
     decimals: 9,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x5eDE350E84223fb50775fD91a723F2ca71034cf7.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x5eDE350E84223fb50775fD91a723F2ca71034cf7.svg',
     website: 'https://www.sheepgamexyz.com/',
     description:
       'Wolf.Game pioneered new types of NFT mechanics BUT SheepGame brings it to Avalanche! Fully decentralized. Low Fees and Sub Second Finality and fully functional! SheepGame shows what’s possible with interactions between the ERC-20 and ERC-721 protocols on Avalanche. For the very first time, your NFT can steal other NFTs (ERC-721) for you. The rarer your NFT, the more tokens youll accumulate probabilistically!',
@@ -5090,8 +5075,7 @@ export const tokens = {
     address: '0x245C2591403e182e41d7A851eab53B01854844CE',
     chainId: 43114,
     decimals: 8,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x245C2591403e182e41d7A851eab53B01854844CE.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x245C2591403e182e41d7A851eab53B01854844CE.svg',
     website: 'https://asgarddao.fi/',
     description:
       'Asgard also introduces economic and game-theoretic dynamics into the market through forging (Staking) and pledging (Minting). Our goal is to build a policy-controlled currency system, native on the Avalanche Network, that is based on the VOLT token! ',
@@ -5103,8 +5087,7 @@ export const tokens = {
     address: '0xb27c8941a7Df8958A1778c0259f76D1F8B711C35',
     chainId: 43114,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xb27c8941a7Df8958A1778c0259f76D1F8B711C35.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xb27c8941a7Df8958A1778c0259f76D1F8B711C35.svg',
     website: 'https://www.kalao.io/',
     description:
       'Kalao is an NFT ecosystem. We offer a cost-effective and easy-to-use Marketplace, powered by a combination of the Avalanche blockchain technology and outstanding Kalao VR capabilities. The Kalao framework will accelerate the adoption of VR technology to develop virtual worlds and sustain the digital transformation of business use cases.',
@@ -5116,8 +5099,7 @@ export const tokens = {
     address: '0x8aE8be25C23833e0A01Aa200403e826F611f9CD2',
     chainId: 43114,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x8aE8be25C23833e0A01Aa200403e826F611f9CD2.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x8aE8be25C23833e0A01Aa200403e826F611f9CD2.svg',
     website: 'https://talecraft.io/',
     description:
       'TaleCraft is a PVP, play-to-earn card board game, driven by a unique mint and craft mechanic, where players grow more powerful through gamified NFT alchemy. Elemental base cards are sold weekly, allowing only the most skilled alchemists to thrive and progress in this medieval metaverse. All NFT holders will receive AVAX yield generated by the game ecosystem, rewarding the most loyal and skilled holders. NFT & Token Deflation System TaleCraft leverages a brand new type of NFT minting process that balances game design and scarcity, designed to produce a sustainable, long-term economy. Crafting Technology achieves this, in part, by burning base cards to craft higher-tier cards, combing scarcity with game theory. Additionally, when chests are opened with $CRAFT, they are both burnt and used for vital liquidity--bolstering the entire game economy. The NFT’s total supply will be determined and balanced by community demand driven by free market principles.',
@@ -5170,8 +5152,7 @@ export const tokens = {
     description:
       'USDC is a fully collateralized US dollar stablecoin. USDC is issued by regulated financial institutions, backed by fully reserved assets, redeemable on a 1:1 basis for US dollars.',
     bridge: 'native',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d.png',
   },
   ROCO: {
     chainId: 43114,
@@ -5298,8 +5279,7 @@ export const tokens = {
     address: '0x6d80113e533a2C0fe82EaBD35f1875DcEA89Ea97',
     chainId: 43114,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -5327,12 +5307,10 @@ export const tokens = {
     address: '0x7275c131b1F67e8B53b4691F92B0E35A4c1C6e22',
     chainId: 43114,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
-    description:
-      'Balancer linear pool that consist of AVAX and wrapped Aave Interest Bearing AVAX.',
+    description: 'Balancer linear pool that consist of AVAX and wrapped Aave Interest Bearing AVAX.',
     bridge: 'native',
   },
   yyAVAX: {
@@ -5342,8 +5320,7 @@ export const tokens = {
     address: '0xF7D9281e8e363584973F946201b82ba72C965D27',
     chainId: 43114,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://yieldyak.com/',
     documentation: 'https://docs.yieldyak.com/for-yyavax-holders/using-yyavax',
     description:
@@ -5357,8 +5334,7 @@ export const tokens = {
     address: '0x625E7708f30cA75bfd92586e17077590C60eb4cD',
     chainId: 43114,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -5387,12 +5363,10 @@ export const tokens = {
     address: '0xEb496161099D45B3ea4892408ef745c6182eB56e',
     chainId: 43114,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
-    description:
-      'Balancer linear pool that consist of USDC and wrapped Aave Interest Bearing USDC.',
+    description: 'Balancer linear pool that consist of USDC and wrapped Aave Interest Bearing USDC.',
     bridge: 'native',
   },
   aavUSDT: {
@@ -5402,8 +5376,7 @@ export const tokens = {
     address: '0x6ab707Aca953eDAeFBc4fD23bA73294241490620',
     chainId: 43114,
     decimals: 6,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description:
@@ -5432,12 +5405,10 @@ export const tokens = {
     address: '0xeA67626E1f0b59e0d172a04F5702ef90BcdF440C',
     chainId: 43114,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
-    description:
-      'Balancer linear pool that consist of USDT and wrapped Aave Interest Bearing USDT.',
+    description: 'Balancer linear pool that consist of USDT and wrapped Aave Interest Bearing USDT.',
     bridge: 'native',
   },
   bbaavUSD: {
@@ -5447,8 +5418,7 @@ export const tokens = {
     address: '0xa1D14d922a575232066520EDA11E27760946c991',
     chainId: 43114,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://app.balancer.fi/#/',
     documentation: 'https://docs.balancer.fi/products/balancer-pools/boosted-pools',
     description:
@@ -5534,8 +5504,7 @@ export const tokens = {
     oracleId: 'waAvaBTCb',
     chainId: 43114,
     decimals: 8,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x152b9d0FdC40C096757F570A51E494bd4b943E50.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x152b9d0FdC40C096757F570A51E494bd4b943E50.svg',
     website: 'https://bridge.avax.network/',
     description: 'Wrapped Aave Avalanche BTCb',
     bridge: 'native',
@@ -5552,8 +5521,7 @@ export const tokens = {
     description:
       'USDC is a fully collateralized US dollar stablecoin. USDC is issued by regulated financial institutions, backed by fully reserved assets, redeemable on a 1:1 basis for US dollars.',
     bridge: 'native',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d.png',
   },
   waAvaSAVAX: {
     address: '0x7D0394F8898fBA73836Bf12bD606228887705895',
@@ -5568,4 +5536,4 @@ export const tokens = {
       'BENQI Liquid Staking is a protocol enabling users to stake AVAX to receive sAVAX, an interest bearing version of AVAX',
     bridge: 'native',
   },
-} as const satisfies Record<string, Token>;
+});

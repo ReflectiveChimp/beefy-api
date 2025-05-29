@@ -1,7 +1,9 @@
+import type { BeefyFinance } from '../../../types/beefyfinance.js';
+
 const zeroAddress = '0x0000000000000000000000000000000000000000';
 const hw = '0x3Eb7fB70C03eC4AEEC97C6C6C1B59B014600b7F7';
 
-export const beefyfinance = {
+export const beefyfinance: BeefyFinance = {
   devMultisig: zeroAddress,
   treasuryMultisig: zeroAddress,
   strategyOwner: '0x5B96bbAca98D777cb736dd89A519015315E00D02',
@@ -17,4 +19,4 @@ export const beefyfinance = {
   voter: '0x5e1caC103F943Cd84A1E92dAde4145664ebf692A',
   beefyFeeConfig: '0x2840463Ea288c26B66E24f92E8C704e1aB6b095c',
   vaultFactory: '0x70127945067E4224d7B6ABfDc6f57e3ea45d5CA4',
-} as const;
+};

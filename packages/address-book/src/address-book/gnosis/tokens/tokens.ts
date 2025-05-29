@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const xDAI = {
   name: 'Wrapped xDAI',
@@ -15,7 +16,7 @@ const xDAI = {
   documentation: 'https://docs.gnosischain.com/about/tokens/xdai',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: xDAI,
   FEES: xDAI,
   xDAI,
@@ -170,8 +171,7 @@ export const tokens = {
     decimals: 18,
     logoURI: '',
     website: 'https://curve.finance/crvusd',
-    description:
-      'crvUSD is a collateralized-debt-position (CDP) stablecoin pegged to the US Dollar',
+    description: 'crvUSD is a collateralized-debt-position (CDP) stablecoin pegged to the US Dollar',
     documentation: 'https://docs.curve.finance/crvUSD/crvUSD/',
     bridge: 'gnosis-canonical',
   },
@@ -239,8 +239,7 @@ export const tokens = {
     address: '0xA1Fa064A85266E2Ca82DEe5C5CcEC84DF445760e',
     chainId: 100,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description: 'Aave interest bearing GNO.',
@@ -252,8 +251,7 @@ export const tokens = {
     address: '0x7c16F0185A26Db0AE7a9377f23BC18ea7ce5d644',
     chainId: 100,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description: 'Wrapped Aave interest bearing GNO.',
@@ -265,8 +263,7 @@ export const tokens = {
     address: '0x23e4E76D01B2002BE436CE8d6044b0aA2f68B68a',
     chainId: 100,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description: 'Aave interest bearing wstETH.',
@@ -278,8 +275,7 @@ export const tokens = {
     address: '0x773CDA0CADe2A3d86E6D4e30699d40bB95174ff2',
     chainId: 100,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description: 'Wrapped Aave interest bearing wstETH.',
@@ -291,8 +287,7 @@ export const tokens = {
     address: '0xa818F1B57c201E092C4A2017A91815034326Efd1',
     chainId: 100,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description: 'Aave interest bearing ETH .',
@@ -304,8 +299,7 @@ export const tokens = {
     address: '0x57f664882F762FA37903FC864e2B633D384B411A',
     chainId: 100,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x4988a896b1227218e4A686fdE5EabdcAbd91571f.svg',
     website: 'https://aave.com/',
     documentation: 'https://docs.aave.com/developers/v/2.0/the-core-protocol/atokens',
     description: 'Wrapped Aave interest bearing ETH.',
@@ -353,4 +347,4 @@ export const tokens = {
     description:
       'Backed Tesla (bTSLA) is a tracker certificate issued as an ERC-20 token. bTSLA tracks the price of Tesla Inc. (the underlying). bTSLA is designed to give eligible cryptocurrency market participants regulatory-compliant access to the stock price of Tesla Inc.',
   },
-} as const satisfies Record<string, Token>;
+});

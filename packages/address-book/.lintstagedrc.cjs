@@ -1,24 +1,24 @@
-const ifStaged = fn => stagedFiles => stagedFiles.length === 0 ? [] : fn(stagedFiles);
+const ifStaged = (fn) => (stagedFiles) => (stagedFiles.length === 0 ? [] : fn(stagedFiles));
 const withArgs = (cmd, ...args) => `${cmd} ${args.flat().join(' ')}`;
 
 module.exports = {
-  './(src|scripts)/**/*.ts': ifStaged(stagedFiles => [
+  './(src|scripts)/**/*.ts': ifStaged((stagedFiles) => [
     withArgs('prettier', '--write', stagedFiles),
     withArgs('eslint', '--fix', stagedFiles),
     withArgs('tsc', '--noEmit'),
   ]),
-  './src/address-book/*/tokens/tokens.ts': ifStaged(stagedFiles => {
-    const chains = stagedFiles.map(file => file.split('/')[2]).filter(v => !!v);
+  './src/address-book/*/tokens/tokens.ts': ifStaged((stagedFiles) => {
+    const chains = stagedFiles.map((file) => file.split('/')[2]).filter((v) => !!v);
     if (!chains.length) {
       throw new Error('Matched files do not match expected path structure');
     }
     return [withArgs('ts-node', '--transpileOnly', './scripts/checkDuplicates.ts', chains)];
   }),
-  './src/address-book/*/**/*.ts': ifStaged(stagedFiles => {
+  './src/address-book/*/**/*.ts': ifStaged((stagedFiles) => {
     const changed = stagedFiles.reduce(
       (acc, file) => {
         const matches = file.match(
-          /^src\/address-book\/(?<chain>[^/]+)\/((?<type>[^/]+)\/)?(?<file>[^.]+)\.ts$/
+          /^src\/address-book\/(?<chain>[^/]+)\/((?<type>[^/]+)\/)?(?<file>[^.]+)\.ts$/,
         );
         if (!matches) {
           console.error(`Matched file does not match expected path structure: ${file}`);
@@ -33,7 +33,7 @@ module.exports = {
         }
         return acc;
       },
-      { all: new Set(), tokens: new Set(), platforms: new Set() }
+      { all: new Set(), tokens: new Set(), platforms: new Set() },
     );
 
     const all = changed.all.size
@@ -49,7 +49,7 @@ module.exports = {
           '--transpileOnly',
           './scripts/checksum.ts',
           '--tokens',
-          Array.from(changed.tokens)
+          Array.from(changed.tokens),
         )
       : undefined;
     const platforms = changed.platforms.size
@@ -58,9 +58,9 @@ module.exports = {
           '--transpileOnly',
           './scripts/checksum.ts',
           '--platforms',
-          Array.from(changed.platforms)
+          Array.from(changed.platforms),
         )
       : undefined;
-    return [all, tokens, platforms].filter(v => !!v);
+    return [all, tokens, platforms].filter((v) => !!v);
   }),
 };

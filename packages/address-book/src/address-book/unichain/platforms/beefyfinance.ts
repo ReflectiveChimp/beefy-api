@@ -1,7 +1,9 @@
+import type { BeefyFinance } from '../../../types/beefyfinance.js';
+
 const devMultisig = '0x04db327e5d9A0c680622E2025B5Be7357fC757f0';
 const treasuryMultisig = '0x10E13f11419165beB0F456eC8a230899E4013BBD';
 
-export const beefyfinance = {
+export const beefyfinance: BeefyFinance = {
   devMultisig,
   treasuryMultisig,
   strategyOwner: '0xFf98D43D9A707DB36874404425500EB230140555',
@@ -35,4 +37,4 @@ export const beefyfinance = {
   beefyOracleChainlink: '0x2Da0b857E9545050D5bD8f0DAb7D34BC7AFE3F3a',
   beefyOracleUniswapV2: '0xFff9Bef65438BD7ffe9e7d44D5CB1E9F77D509E4',
   beefyOracleUniswapV3: '0x500d192f2755d18d2686038e03aB58a314336A90',
-} as const;
+};

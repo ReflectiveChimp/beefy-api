@@ -49,21 +49,18 @@ export const ${chainName} = {
   // Add import statement after the last import
   const importStatement = `import { ${chainName} } from './${chainName}/index.js';`;
   indexContent =
-    indexContent.slice(0, nextLineIndex + 1) +
-    importStatement +
-    '\n' +
-    indexContent.slice(nextLineIndex + 1);
+    indexContent.slice(0, nextLineIndex + 1) + importStatement + '\n' + indexContent.slice(nextLineIndex + 1);
 
   // Add to addressBook object
   const addressBookRegex = /export const addressBook: ReadonlyRecord<ChainIdKey, Chain> = {[^}]*}/;
-  indexContent = indexContent.replace(addressBookRegex, match => {
+  indexContent = indexContent.replace(addressBookRegex, (match) => {
     return match.slice(0, -1) + `  ${chainName},\n}`;
   });
 
   // Add to addressBookByChainId object
   const addressBookByChainIdRegex =
     /export const addressBookByChainId: ReadonlyRecord<`\${ChainId}`, Chain> = {[^}]*}/;
-  indexContent = indexContent.replace(addressBookByChainIdRegex, match => {
+  indexContent = indexContent.replace(addressBookByChainIdRegex, (match) => {
     return match.slice(0, -1) + `  [ChainId.${chainName}]: ${chainName},\n}`;
   });
 
@@ -81,7 +78,7 @@ export const ${chainName} = {
 const treasuryMultisig = '0x0000000000000000000000000000000000000000';
 const devMultisig = '0x0000000000000000000000000000000000000000';
 
-export const beefyfinance = {
+export const beefyfinance: BeefyFinance = {
   devMultisig,
   treasuryMultisig,
   strategyOwner: '0x0000000000000000000000000000000000000000',
@@ -113,7 +110,7 @@ export const beefyfinance = {
   beefyOracleUniswapV3: '0x0000000000000000000000000000000000000000',
   beefyOracleSolidly: '0x0000000000000000000000000000000000000000',
   beefyOracleAlgebra: '0x0000000000000000000000000000000000000000',
-} as const;
+};
 `;
 
   const indexPathContent = `
@@ -194,7 +191,7 @@ export const tokens = {
   }
 
   console.log(
-    `Chain '${chainName}' has been added to the address book, chainIdMap, index.ts, and chainid.ts.`
+    `Chain '${chainName}' has been added to the address book, chainIdMap, index.ts, and chainid.ts.`,
   );
 }
 

@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const ETH = {
   name: 'Wrapped Ether',
@@ -44,7 +45,7 @@ const FTM = {
   documentation: 'https://docs.fantom.foundation/',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: FTM,
   FEES: FTM,
   FTM,
@@ -187,8 +188,7 @@ export const tokens = {
     address: '0x501acE9c35E60f03A2af4d484f49F9B1EFde9f40',
     chainId: 250,
     decimals: 18,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x501acE9c35E60f03A2af4d484f49F9B1EFde9f40.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x501acE9c35E60f03A2af4d484f49F9B1EFde9f40.svg',
     website: 'https://solace.fi/',
     description:
       'Solace is building a community around making this space safe, secure and trusted so that we can onboard and de-risk DeFi and other crypto applications while opening the space to millions of users. We recently launched a coverage policy protocol that enables protection for liquidity providers, Defi protocols or DAOs to mitigate loss from hacks, bugs and exploits. Our purpose is to transform DeFi by delivering intelligent and empowering tools for a safe, secure and trusted industry.',
@@ -239,8 +239,7 @@ export const tokens = {
     chainId: 250,
     decimals: 18,
     website: 'https://beets.fi/sftmx',
-    documentation:
-      'https://beethovenxio.medium.com/the-yield-bearing-masterpiece-sftmx-50af069de6c2',
+    documentation: 'https://beethovenxio.medium.com/the-yield-bearing-masterpiece-sftmx-50af069de6c2',
     description:
       'sFTMx is a liquid-staked token that users receive when they stake FTM on the Beethoven X platform. The value of sFTMx naturally appreciates in relation to FTM thanks to native network staking rewards automatically compounded within the token. This token seamlessly integrates with other DeFi applications, enabling users to utilize it across various protocols, including DEXs and lending markets.',
     logoURI: 'https://beethoven-assets.s3.eu-central-1.amazonaws.com/sFTMx-token2x.png',
@@ -280,8 +279,7 @@ export const tokens = {
     decimals: 18,
     website: 'http://www.usdbalance.com/',
     bridge: 'native',
-    description:
-      'USDB provides a wide range of financial tools and services to individuals and institutions',
+    description: 'USDB provides a wide range of financial tools and services to individuals and institutions',
     logoURI: '',
   },
   GEL: {
@@ -306,8 +304,7 @@ export const tokens = {
     decimals: 18,
     website: 'https://topshelf.finance/',
     bridge: 'native',
-    description:
-      'Mint fully decentralized sythentic assets on Binance Smart Chain, Fantom & Avalanche.',
+    description: 'Mint fully decentralized sythentic assets on Binance Smart Chain, Fantom & Avalanche.',
     logoURI: '',
   },
   USDL: {
@@ -319,8 +316,7 @@ export const tokens = {
     decimals: 18,
     website: 'https://topshelf.finance/',
     bridge: 'native',
-    description:
-      'Mint fully decentralized sythentic assets on Binance Smart Chain, Fantom & Avalanche.',
+    description: 'Mint fully decentralized sythentic assets on Binance Smart Chain, Fantom & Avalanche.',
     logoURI: '',
   },
   STG: {
@@ -358,8 +354,7 @@ export const tokens = {
     address: '0xbf4906762C38F50bC7Be0A11BB452C944f6C72E1',
     chainId: 250,
     decimals: 18,
-    logoURI:
-      'https://app.fbomb.finance/images/tokens/0xbf4906762C38F50bC7Be0A11BB452C944f6C72E1.png',
+    logoURI: 'https://app.fbomb.finance/images/tokens/0xbf4906762C38F50bC7Be0A11BB452C944f6C72E1.png',
     website: 'https://app.fbomb.finance/',
     bridge: 'native',
     description: 'Shrapnel is an inflationary token launched along with BombSwap.',
@@ -624,8 +619,7 @@ export const tokens = {
     bridge: 'Synapse',
     description:
       'Olympus is building a community-owned decentralized financial infrastructure to bring more stability and transparency for the world.',
-    logoURI:
-      'https://assets.coingecko.com/coins/images/14483/large/token_OHM_%281%29.png?1628311611',
+    logoURI: 'https://assets.coingecko.com/coins/images/14483/large/token_OHM_%281%29.png?1628311611',
   },
   OXD: {
     name: '0xDAO',
@@ -767,10 +761,8 @@ export const tokens = {
     decimals: 18,
     website: 'https://spartacadabra.money/',
     bridge: 'native',
-    description:
-      'Spartacadabra unlocks yield bearing assets and conjures magic stable coin Lambda (λ).',
-    logoURI:
-      'https://assets.coingecko.com/coins/images/21208/small/vXl4xT-P_400x400.png?1638567924',
+    description: 'Spartacadabra unlocks yield bearing assets and conjures magic stable coin Lambda (λ).',
+    logoURI: 'https://assets.coingecko.com/coins/images/21208/small/vXl4xT-P_400x400.png?1638567924',
   },
   LUNAw: {
     name: 'LUNA (Wormhole)',
@@ -781,8 +773,7 @@ export const tokens = {
     decimals: 6,
     website: 'https://www.terra.money/',
     bridge: 'wormhole',
-    description:
-      'Terras native token, LUNA, is used to stabilize the price of the protocols stablecoins.',
+    description: 'Terras native token, LUNA, is used to stabilize the price of the protocols stablecoins.',
     logoURI: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4172.png',
   },
   UST: {
@@ -925,8 +916,7 @@ export const tokens = {
     bridge: 'native',
     description:
       'BEETS is the governance token for the Beethoven X protocol. Built on Balancer V2, Beethoven X is the first next-generation AMM protocol on Fantom.',
-    logoURI:
-      'https://assets.coingecko.com/coins/images/19158/small/beets-icon-large.png?1634545465',
+    logoURI: 'https://assets.coingecko.com/coins/images/19158/small/beets-icon-large.png?1634545465',
     documentation: 'https://docs.beets.fi/beets/tokenomics',
   },
   fSING: {
@@ -977,8 +967,7 @@ export const tokens = {
     logoURI: 'https://assets.spookyswap.finance/tokens/STEAK.png',
     website: 'https://stakesteak.com/',
     bridge: 'native',
-    description:
-      "StakeSteak's mission is to build lasting infrastructure to stabilize fUSD at $1.00",
+    description: "StakeSteak's mission is to build lasting infrastructure to stabilize fUSD at $1.00",
   },
   FOO: {
     name: 'Fantums of Opera Token',
@@ -1480,8 +1469,7 @@ export const tokens = {
     decimals: 18,
     chainId: 250,
     website: 'https://synthetix.io/',
-    description:
-      'Tracks the price of a single US dollar (USD). The synth always remains at a constant of 1.',
+    description: 'Tracks the price of a single US dollar (USD). The synth always remains at a constant of 1.',
     logoURI: 'https://ftmscan.com/token/images/sUSD_32.png',
     bridge: 'multichain',
   },
@@ -1705,8 +1693,7 @@ export const tokens = {
     decimals: 18,
     website: 'https://abracadabra.money/',
     bridge: 'multichain',
-    description:
-      'SPELL is the incentivation token of Abracadabra.money. sSPELL is the staked version of it',
+    description: 'SPELL is the incentivation token of Abracadabra.money. sSPELL is the staked version of it',
     logoURI: 'https://app.spiritswap.finance/images/tokens/SSPELL.png',
   },
   wMEMO: {
@@ -1718,8 +1705,7 @@ export const tokens = {
     decimals: 18,
     website: 'https://abracadabra.money/',
     bridge: 'multichain',
-    description:
-      'wMEMO is a wrapped version of MEMO. MEMO (Memories) is the reciept of staked TIME.',
+    description: 'wMEMO is a wrapped version of MEMO. MEMO (Memories) is the reciept of staked TIME.',
     logoURI: 'https://app.spiritswap.finance/images/tokens/WMEMO.png',
   },
   DOLA: {
@@ -1756,8 +1742,7 @@ export const tokens = {
     chainId: 250,
     decimals: 18,
     bridge: 'native',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x3dc57B391262e3aAe37a08D91241f9bA9d58b570.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x3dc57B391262e3aAe37a08D91241f9bA9d58b570.svg',
     website: 'https://yoshi.exchange/',
     description:
       'Yoshi offers users a simple way to buy crypto tokens via credit card. We use native Yoshi token to provide fast and simple buying proccess. Connect your crypto wallet via MetaMask or WalletConnect. To procced for bying you’ll need to surpass a KYC and add a valid credit card. Once everything is done you’ll see the actual exchange rate and get your tokens after the buying proccess is done.',
@@ -1770,8 +1755,7 @@ export const tokens = {
     chainId: 250,
     decimals: 18,
     bridge: 'native',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x89346B51A54263cF2e92dA79B1863759eFa68692.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x89346B51A54263cF2e92dA79B1863759eFa68692.svg',
     website: 'https://app.spartacus.finance/',
     description:
       'Let’s start off by saying Zeus from OlympusDAO has done a marvellous job in creating the "Protocol Owned Liquidity" (POL) concept. A community is formed when everyone bonds the underlying assets into a common reserve currency, creating a strong “bonding” for the whole community. As Spartacus we carry on the legacy and we shall aim higher and something even bigger.',
@@ -1784,8 +1768,7 @@ export const tokens = {
     chainId: 250,
     decimals: 18,
     bridge: 'native',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x94CcF60f700146BeA8eF7832820800E2dFa92EdA.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x94CcF60f700146BeA8eF7832820800E2dFa92EdA.svg',
     website: 'https://hector.network/',
     description:
       'Hector Network is developing an expansive web 3 ecosystem for a visionary future. The foundations of the ecosystem, supported by the HEC utility token and TOR stablecoin, are functionality, accessibility and community. In conjunction with their growing list of partners, Hector Network is expanding crosschain and is dedicated to mass adoption.',
@@ -1798,8 +1781,7 @@ export const tokens = {
     chainId: 250,
     decimals: 18,
     bridge: 'multichain',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x9d8F97A3C2f9f397B6D46Cbe2d39CC1D8Cf19010.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x9d8F97A3C2f9f397B6D46Cbe2d39CC1D8Cf19010.svg',
     website: 'https://openocean.finance/',
     description:
       'OpenOcean is the world’s first full aggregation protocol for crypto trading that sources liquidity from DeFi and CeFi markets and enables cross-chain swaps. Our intelligent routing algorithm finds the best prices from DEXes and CEXes and splits the routes to provide traders the best prices with low slippage and fast settlement. The product is free to use; OpenOcean users only need to pay the regular blockchain gas and exchange fees for the trades, which are charged by the exchanges and not OpenOcean.',
@@ -1812,8 +1794,7 @@ export const tokens = {
     chainId: 250,
     decimals: 18,
     bridge: 'multichain',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x511D35c52a3C244E7b8bd92c0C297755FbD89212.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x511D35c52a3C244E7b8bd92c0C297755FbD89212.svg',
     website: 'https://www.avalabs.org/',
     description:
       'Avalanche is the fastest smart contracts platform in the blockchain industry, as measured by time-to-finality, and has the most validators securing its activity of any proof-of-stake protocol.',
@@ -1867,8 +1848,7 @@ export const tokens = {
     chainId: 250,
     decimals: 18,
     bridge: 'native',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x10010078a54396F62c96dF8532dc2B4847d47ED3.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x10010078a54396F62c96dF8532dc2B4847d47ED3.svg',
     website: 'https://hundred.finance/',
     description:
       'Since the explosion in popularity of the decentralized finance ecosystem in 2020, borrowing and lending platforms have become core infrastructure within the cryptocurrency space. Not only do they provide users the ability to “hodl” or leverage their crypto assets, obtaining liquidity from their investment (a crypto-backed loan) while simultaneously earning interest, they also underpin the workings of other protocols. The movement of assets from the Ethereum mainnet to EVM-compatible blockchains and scaling solutions has done nothing to alter this. Platforms that grant the ability to borrow and lend are one of the key applications users look for in any emerging chain. Hundred Finance aims to play a central role in provisioning these services in the multi-chain environment that has flourished since early 2021, delivering the freedom to earn yield and borrow assets to a growing number of users in a trustless, secure and economically efficient manner.',
@@ -1924,8 +1904,7 @@ export const tokens = {
     bridge: 'ren',
     description:
       'RenBTC is an ERC-20 token built on the Ethereum network, pegged to Bitcoin. This means that each RenBTC can be always redeemed for one Bitcoin, and hence tends to maintain its value at close to the Bitcoin market rate.',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xfCe146bF3146100cfe5dB4129cf6C82b0eF4Ad8c.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xfCe146bF3146100cfe5dB4129cf6C82b0eF4Ad8c.png',
   },
   EQUAL: {
     name: 'Equalizer',
@@ -1939,8 +1918,7 @@ export const tokens = {
     bridge: 'native',
     description:
       'Equalizer was derived from the initial concept of Andre Cronje. The mechanism that was used to create a perpetual decentralized exchange was unique and ingenious. The launch of this platform is to take the concept and apply it to a more natural style DEX. Equalizer will become the trading mechanism for the Fantom network, utilizing the Solidly perpetual model with some tweaks to fee structures and emissions.',
-    documentation:
-      'https://equalizer0x.gitbook.io/equalizer-exchange-docs/guides/equalizer-exchange',
+    documentation: 'https://equalizer0x.gitbook.io/equalizer-exchange-docs/guides/equalizer-exchange',
   },
   ANKR: {
     name: 'Ankr',
@@ -2150,4 +2128,4 @@ export const tokens = {
     logoURI: '',
     bridge: 'wormhole',
   },
-} as const satisfies Record<string, Token>;
+});

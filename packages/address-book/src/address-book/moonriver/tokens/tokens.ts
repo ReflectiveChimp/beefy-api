@@ -1,4 +1,5 @@
 import type { Token } from '../../../types/token.js';
+import { constTokens } from '../../../util/constTokens.js';
 
 const MOVR = {
   name: 'Wrapped MOVR',
@@ -43,7 +44,7 @@ const SUSHI = {
   logoURI: 'https://ftmscan.com/token/images/sushiswap_32.png',
 } as const satisfies Token;
 
-export const tokens = {
+export const tokens = constTokens({
   WNATIVE: MOVR,
   FEES: MOVR,
   MOVR,
@@ -86,8 +87,7 @@ export const tokens = {
     decimals: 8,
     logoURI: 'https://cryptologos.cc/logos/dogecoin-doge-logo.svg?v=014',
     website: 'https://dogecoin.com/',
-    description:
-      'Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.',
+    description: 'Dogecoin is an open source peer-to-peer digital currency, favored by Shiba Inus worldwide.',
   },
   XRP: {
     name: 'XRP Token',
@@ -133,8 +133,7 @@ export const tokens = {
     address: '0x15B9CA9659F5dfF2b7d35a98dd0790a3CBb3D445',
     chainId: 1285,
     decimals: 10,
-    logoURI:
-      'https://assets.coingecko.com/coins/images/12171/large/aJGBjJFU_400x400.jpg?1597804776',
+    logoURI: 'https://assets.coingecko.com/coins/images/12171/large/aJGBjJFU_400x400.jpg?1597804776',
     website: 'https://polkadot.network/',
     description:
       'Polkadot is an open source, blockchain-based distributed computing platform that enables the blockchains built on top of it, known as "parachains", to execute atomic inter-chain transactions between themselves in a trust-minimized way, thereby creating an interconnected internet of blockchains.',
@@ -244,8 +243,7 @@ export const tokens = {
     website: 'https://www.binance.com/',
     description:
       'Binance Coin (BNB) is an exchange-based token created and issued by the cryptocurrency exchange Binance. Initially created on the Ethereum blockchain as an ERC-20 token in July 2017, BNB was migrated over to Binance Chain in February 2019 and became the native coin of the Binance Chain.',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png',
   },
   WBTC: {
     name: 'Wrapped BTC',
@@ -397,8 +395,7 @@ export const tokens = {
     address: '0x3D2D044E8C6dAd46b4F7896418d3d4DFaAD902bE',
     chainId: 1285,
     decimals: 9,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x3D2D044E8C6dAd46b4F7896418d3d4DFaAD902bE.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x3D2D044E8C6dAd46b4F7896418d3d4DFaAD902bE.svg',
     website: 'https://romedao.finance/',
     description:
       'RomeDAO is a community project with no central team. It’s a community project built by and for the community. This means it’s up to the community contributors to build a prospering Rome.',
@@ -410,8 +407,7 @@ export const tokens = {
     address: '0x4a436073552044D5f2f49B176853ad3Ad473d9d6',
     chainId: 1285,
     decimals: 9,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0x3D2D044E8C6dAd46b4F7896418d3d4DFaAD902bE.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0x3D2D044E8C6dAd46b4F7896418d3d4DFaAD902bE.svg',
     website: 'https://romedao.finance/',
     description:
       'RomeDAO is a community project with no central team. It’s a community project built by and for the community. This means it’s up to the community contributors to build a prospering Rome.',
@@ -425,8 +421,7 @@ export const tokens = {
     decimals: 18,
     website: 'https://www.binance.com/',
     description: 'BNB from BSC wrapped by passport.meter.io',
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png',
   },
   WBTCeth: {
     name: 'Wrapped Bitcoin',
@@ -447,8 +442,7 @@ export const tokens = {
     address: '0xFfFFfFff1FcaCBd218EDc0EbA20Fc2308C778080',
     chainId: 1285,
     decimals: 12,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xFfFFfFff1FcaCBd218EDc0EbA20Fc2308C778080.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xFfFFfFff1FcaCBd218EDc0EbA20Fc2308C778080.svg',
     website: 'https://kusama.network/',
     description:
       'xcKSM is the Moonriver bridged verison of KSM from Kusama. Kusama is an experimental and development environment for features that will eventually be deployed to Polkadot.',
@@ -462,11 +456,9 @@ export const tokens = {
     address: '0xffffffFF893264794d9d57E1E0E21E0042aF5A0A',
     chainId: 1285,
     decimals: 10,
-    logoURI:
-      'https://tokens.pancakeswap.finance/images/0xffffffFF893264794d9d57E1E0E21E0042aF5A0A.svg',
+    logoURI: 'https://tokens.pancakeswap.finance/images/0xffffffFF893264794d9d57E1E0E21E0042aF5A0A.svg',
     website: 'https://www.rmrk.app/',
-    description:
-      'ETERNALLY liquid. FORWARD compatible.Nested, conditional, & Multi-resourced NFTs.',
+    description: 'ETERNALLY liquid. FORWARD compatible.Nested, conditional, & Multi-resourced NFTs.',
   },
   stKSM: {
     name: 'stKSM',
@@ -518,4 +510,4 @@ export const tokens = {
     oracleId: 'sushi-mr-bifi-wmovr',
     oracle: 'lps',
   },
-} as const satisfies Record<string, Token>;
+});
